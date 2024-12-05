@@ -1,17 +1,39 @@
+/* ! Partie text & image */
+
+.text-img-container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2.5rem;    
+}
+
 .homepage-text-container{
-    width: 60%;
+    width: 65%;
     color: var(--main-color);
     justify-items: center;
-    margin: 2.5rem;
 }
 
 .homepage-text-title{
     font-size: 1.2rem;
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     margin-top: 1rem;
 }
 
 .homepage-text{
-
+    line-height: 1.5rem;
+    font-size: 1.1rem;
 }
+
+.img-homepage{
+    width: 25%;
+    border-radius: 25px;
+}
+/*2150px pour le responsive
+
+
+/* ! Partie vignettes */
+
+
+
+
+/* ! Partie bouton */
