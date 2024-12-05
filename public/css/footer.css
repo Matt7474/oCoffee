@@ -3,7 +3,7 @@ footer{
     background-color: var(--fourth-color);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -14,9 +14,24 @@ footer{
     flex-direction: column;
     align-items: center;
     position: absolute;
-    right: 2rem;
-    margin-top: -39.2rem;
+    right: 1.5rem;
+    
 }
+/* @media all and (min-width: 360px) {
+    .arrow-up-container{
+        margin-top: -49.2rem;
+    }
+} 
+@media all and (min-width: 600px) {
+    .arrow-up-container{
+        margin-top: -40.2rem;
+    }
+} 
+@media all and (min-width: 600px) {
+    .arrow-up-container{
+        margin-top: -40.2rem;
+    }
+}  */
 
 .arrow-up{
     width: 2rem;
@@ -29,6 +44,7 @@ footer{
 }
 
 /*! Partie titre & logo !*/
+
 
 .footer-title-container{
     margin-top: .5rem;
@@ -59,15 +75,20 @@ footer{
 
 /*! Partie body container & responsive !*/
 
-@media all and (min-width: 767px) {
-    .footer-body-container{
-        display: flex;
-        flex-direction: row;
-    }
-}
 .footer-body-container{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+@media all and (min-width: 950px) {
+    .footer-body-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        align-self: normal;
+    }
 }
 
 /*! Partie logo & lien reseaux sociaux !*/
@@ -112,6 +133,7 @@ footer{
     flex-direction: column;
     align-items: center;
     margin-top: 1rem;
+    width: 30%;
 }
 
 .footer-link-contact{
@@ -127,4 +149,9 @@ footer{
 
 .footer-subtitle{
     font-size: 1.5rem;
+}
+@media all and (min-width: 950px) {
+    .footer-subtitle{
+        margin-bottom: 1.5rem;
+    }
 }
