@@ -1,0 +1,157 @@
+footer{
+    width: 100%;
+    background-color: var(--fourth-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/*! Partie fleche haut de page !*/
+
+.arrow-up-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 1.5rem;
+    
+}
+/* @media all and (min-width: 360px) {
+    .arrow-up-container{
+        margin-top: -49.2rem;
+    }
+} 
+@media all and (min-width: 600px) {
+    .arrow-up-container{
+        margin-top: -40.2rem;
+    }
+} 
+@media all and (min-width: 600px) {
+    .arrow-up-container{
+        margin-top: -40.2rem;
+    }
+}  */
+
+.arrow-up{
+    width: 2rem;
+    rotate: 90deg;
+}
+
+.arrow-up-text{
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+/*! Partie titre & logo !*/
+
+
+.footer-title-container{
+    margin-top: .5rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--main-color);
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+.footer-logo{
+    width: 4rem;
+    background-color: var(--third-color);
+    border-radius: 50%;
+}
+
+.row{
+    width: 1.5rem;
+    height: .3rem;
+    background-color: var(--main-color);
+    margin-top: .2rem;
+}
+
+/*! Partie body container & responsive !*/
+
+.footer-body-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+@media all and (min-width: 950px) {
+    .footer-body-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        align-self: normal;
+    }
+}
+
+/*! Partie logo & lien reseaux sociaux !*/
+
+.footer-link{
+    justify-items: center;
+    margin-top: .5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+.footer-logo-follow{
+    margin-top: 1rem;
+    width: 3rem;
+}
+
+/*! Partie carte interactive !*/
+
+.map-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#map{
+    width: 400px;
+    aspect-ratio: 16/9;
+}
+
+.footer-where{
+    align-items: center;
+    font-size: 1.3rem;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+/*! Partie contact !*/
+
+.footer-link-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    width: 30%;
+}
+
+.footer-link-contact{
+    margin-top: .5rem;
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 1rem;
+}
+
+.footer-copyright{
+    margin-top: 1rem;
+}
+
+.footer-subtitle{
+    font-size: 1.5rem;
+}
+@media all and (min-width: 950px) {
+    .footer-subtitle{
+        margin-bottom: 1.5rem;
+    }
+}

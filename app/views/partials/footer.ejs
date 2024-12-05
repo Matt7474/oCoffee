@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oCoffee</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/header.css"> 
+    <link rel="stylesheet" href="/css/footer.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin="">
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+      defer>
+    </script> 
+</head>
+<body>
+    <header>
+        <!--! Partie titre & logo -->
+        <div class="header-title-container">
+            <a href="/" ><img class="header-logo-oCoffee" src="/images/logo/logo.svg" alt="logo-oCoffee"></a>
+            <a href="/" class="header-title-oCoffee">o'Coffee</a>
+        </div>
+
+        <!--! Partie searchbar -->
+        <div>
+            <form action="/">
+                <div class="header-searchbar-container">
+                    <input type="text" class="header-searchbar" placeholder="Vous cherchez un café ?">
+                    <button type="submit" class="header-searchbar-button"><img class="header-searchbar-glass" alt="loupe" src="/images/logo/loupe-main-color.svg"></button>
+                </div>
+            </form>
+        </div>
+         
+        <!--! Partie logo login et burger-menu -->
+        <div class="header-login-menu-container">
+            <div class="">
+                <a href="#" class="header-login-menu-button"><img class="header-login-menu" alt="menu" src="/images/logo/login-main-color.svg"></a>
+            </div>
+
+            <div class="header-burger-menu-container">
+                <a href="#" class="header-burger-menu-button"><img class="header-burger-menu" alt="menu" src="/images/logo/burger-menu-main-color.svg"></a>
+            </div>
+        </div>
+
+    </header>
+<footer>
+    <!--! Partie fleche haut de page -->
+    <div class="arrow-up-container">
+        <a href="#top" class="arrow-up" ><img class="arrow-up" src="/images/arrow-up.svg" alt="fleche"></a>
+        <a href="#top" class="arrow-up-text">Haut de page</a>
+    </div>
+    
+    <!--! Partie titre & logo -->
+    <div class="footer-title-container">
+        <div class="row"></div>
+        <div class="footer-title">o'C</div>
+        <a href="/"><img class="footer-logo" alt="logo" src="/images/logo/logo.svg"></a>
+        <div class="footer-title">ffee</div>
+        <div class="row"></div>
+    </div>
+
+    <div class="footer-body-container">
+        <!--! Partie réseau sociaux -->
+        <div class="footer-link footer-link-container">
+        <div class="footer-subtitle">Suivez-nous</div>
+            <div class="footer-logo-container">
+                <a href="https://www.facebook.com/PetitePauseCoffee/" target="_blank"><img class="footer-logo-follow logo-facebook" src="/images/logo/facebook-main-color.svg" alt="logo-facebook" ></a>
+
+                <a href="https://fr.pinterest.com/search/pins/?creative_id=683855900147_kwd-10335610&gad_source=1&gclid=CjwKCAiArva5BhBiEiwA-oTnXTpo01svOwycinFi8GiXci4s9mIXlzPZZYNweV46ETVgO3zThlCV7xoChZ4QAvD_BwE&q=caf%C3%A9&utm_medium=paid_search&utm_pai=20147694673_164948142708_683855900147&utm_source=google_search&utm_term=caf%C3%A9" target="_blank"><img class="footer-logo-follow logo-pinterest" src="/images/logo/pinterest-main-color.svg" alt="logo-pinterest"></a>
+                
+                <a href="https://www.youtube.com/@OclockIo" target="_blank"><img class="footer-logo-follow logo-youtube" src="/images/logo/youtube-main-color.svg" alt="logo-youtube"></a>
+                
+                <a href="https://www.instagram.com/cafeapics/?hl=fr" target="_blank"><img class="footer-logo-follow logo-instagram" src="/images/logo/instagram-main-color.svg" alt="logo-instagram"></a>
+                
+                <a href="https://www.linkedin.com/in/matthieu-dimier-a51539290" target="_blank"><img class="footer-logo-follow logo-linkedin" src="/images/logo/linkedin-main-color.svg" alt="logo-linkedin" ></a>
+            </div>
+            
+        </div>
+        <!--! Partie carte interactive -->
+        <div class="map-container">
+            <a href="https://www.google.fr/maps/place/34370+Cazouls-l%C3%A8s-B%C3%A9ziers/@43.3971732,3.0509919,13z/data=!3m1!4b1!4m6!3m5!1s0x12b10a76dde1c5b7:0x42b4bd28660048d9!8m2!3d43.3923968!4d3.1022545!16s%2Fm%2F03mgp_4?entry=ttu&g_ep=EgoyMDI0MTIwMi4wIKXMDSoASAFQAw%3D%3D"  class="footer-link footer-where footer-subtitle" target="_blank">Ou nous trouver</a>
+            <div id="map"></div>
+            <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+            <script>
+                // Initialisation de la carte
+
+                var map = L.map('map').setView([43.39145, 3.10261], 13);
+                var marker = L.marker([43.39145, 3.10261]).addTo(map);
+        
+                // Ajouter un fond de carte avec OpenStreetMap
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
+            </script>   
+        </div>
+
+        <!--! Partie contact & obligations -->
+        <div class="footer-link footer-link-container">
+            <div class="footer-subtitle">Contact</div>
+            <a class="footer-link-contact" href="mailto:dimier.matt@gmail.com?subject=Bonjour%20Matthieu,%20je%20vous%20contacte%20au%20sujet%20de%20...&body=Salut%20Matthieu," target="_blank">dimier.matt@gmail.com</a>
+            <a class="footer-link-contact" href="https://www.google.fr/maps/place/34370+Cazouls-l%C3%A8s-B%C3%A9ziers/@43.3971732,3.0509919,13z/data=!3m1!4b1!4m6!3m5!1s0x12b10a76dde1c5b7:0x42b4bd28660048d9!8m2!3d43.3923968!4d3.1022545!16s%2Fm%2F03mgp_4?entry=ttu&g_ep=EgoyMDI0MTIwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">34370 Cazouls-les-Béziers</a>
+            <a class="footer-link-contact" href="/mentions-legales">mentions légales</a>
+            <a class="footer-link-contact" href="/cgv">CGV</a>
+            <a class="footer-link-contact" href="/error">Plan du site</a>
+        </div>
+    </div>
+    
+
+    <div class="footer-copyright">Copyright 2024. Tous droits réservés.</div>
+
+</footer>
+
+</body>
+</html>
