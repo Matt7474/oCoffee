@@ -1,3 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oCoffee</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/header.css"> 
+    <link rel="stylesheet" href="/css/footer.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin="">
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+      defer>
+    </script> 
+</head>
+<body>
+    <header>
+        <!--! Partie titre & logo -->
+        <div class="header-title-container">
+            <a href="/" ><img class="header-logo-oCoffee" src="/images/logo/logo.svg" alt="logo-oCoffee"></a>
+            <a href="/" class="header-title-oCoffee">o'Coffee</a>
+        </div>
+
+        <!--! Partie searchbar -->
+        <div>
+            <form action="/">
+                <div class="header-searchbar-container">
+                    <input type="text" class="header-searchbar" placeholder="Vous cherchez un café ?">
+                    <button type="submit" class="header-searchbar-button"><img class="header-searchbar-glass" alt="loupe" src="/images/logo/loupe-main-color.svg"></button>
+                </div>
+            </form>
+        </div>
+         
+        <!--! Partie logo login et burger-menu -->
+        <div class="header-login-menu-container">
+            <div class="">
+                <a href="#" class="header-login-menu-button"><img class="header-login-menu" alt="menu" src="/images/logo/login-main-color.svg"></a>
+            </div>
+
+            <div class="header-burger-menu-container">
+                <a href="#" class="header-burger-menu-button"><img class="header-burger-menu" alt="menu" src="/images/logo/burger-menu-main-color.svg"></a>
+            </div>
+        </div>
+
+    </header>
 <footer>
     <!--! Partie fleche haut de page -->
     <div class="arrow-up-container">
