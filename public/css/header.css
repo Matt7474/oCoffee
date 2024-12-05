@@ -47,35 +47,38 @@ header{
 }
 
 @media all and (min-width: 767px) {
-.header-searchbar-container{
-    display: flex;
-    margin-right: -3rem;
-}
-.header-searchbar{
-    width: 20rem;
-    height: 2rem;
-    margin-right: 4rem;
-    background-color: var(--secondary-color);
-    border-radius: 25px;
-    border: 2px solid transparent;
+    .header-searchbar-container{
+        display: flex;
+        margin-right: -3rem;
+    }
+    .header-searchbar{
+        width: 20rem;
+        height: 2rem;
+        margin-right: 4rem;
+        background-color: var(--secondary-color);
+        border-radius: 25px;
+        border: 2px solid transparent;
+        text-indent: 10px;
+        font-size: 1rem;
+    }
+    .header-searchbar::placeholder {
     text-indent: 10px;
-    font-size: 1rem;
-}
-.header-searchbar::placeholder {
-   text-indent: 10px;
-}
-.header-searchbar-button{
-    width: 0px;
-    height: 0px;
-    border: none;
-    background-color: var(--fourth-color);
-}
-.header-searchbar-glass{
-    width: 1.3rem;
-    position: relative;
-    left: -7rem;
-    top: 0.4rem;
-}
+    }
+    .header-searchbar-button{
+        width: 0px;
+        height: 0px;
+        border: none;
+        background-color: var(--fourth-color);
+    }
+    .header-searchbar-glass{
+        width: 1.3rem;
+        position: relative;
+        left: -7rem;
+        top: 0.4rem;
+    }
+    .header-searchbar-glass:hover{
+        cursor: pointer;
+    }
 }
 
 /*! Partie logo login et burger-menu !*/
