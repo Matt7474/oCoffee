@@ -30,6 +30,14 @@ header{
     color: var(--main-color);
 }
 
+/*! Partie searchbar & menu*/
+
+.searchbar-and-menu-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center
+}
+
 /*! Partie searchbar & responsive !*/
 
 @media all and (max-width: 767px) {
@@ -41,9 +49,10 @@ header{
 @media all and (min-width: 767px) {
 .header-searchbar-container{
     display: flex;
+    margin-right: -3rem;
 }
 .header-searchbar{
-    width: 28rem;
+    width: 20rem;
     height: 2rem;
     margin-right: 4rem;
     background-color: var(--secondary-color);
