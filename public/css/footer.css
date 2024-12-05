@@ -93,6 +93,11 @@ footer{
 
 /*! Partie logo & lien reseaux sociaux !*/
 
+.footer-logo-container{
+    display: flex;
+    align-items: center;
+}
+
 .footer-link{
     justify-items: center;
     margin-top: .5rem;
@@ -104,6 +109,12 @@ footer{
 .footer-logo-follow{
     margin-top: 1rem;
     width: 3rem;
+    margin-right: .2rem;
+    margin-left: .2rem;
+}
+
+.logo-youtube{
+    align-self: center;
 }
 
 /*! Partie carte interactive !*/
@@ -137,10 +148,11 @@ footer{
 }
 
 .footer-link-contact{
-    margin-top: .5rem;
+    margin-top: 1rem;
     text-decoration: none;
     color: var(--main-color);
     font-size: 1rem;
+    font-weight: bold;
 }
 
 .footer-copyright{
@@ -149,6 +161,7 @@ footer{
 
 .footer-subtitle{
     font-size: 1.5rem;
+    margin-top: 1.5rem;
 }
 @media all and (min-width: 950px) {
     .footer-subtitle{
