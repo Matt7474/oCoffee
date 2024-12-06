@@ -1,6 +1,8 @@
+/*! Partie haute : route */
+
 .router-top-container{
     margin-top: 1.5rem;
-    margin-left: 26rem;
+    margin-left: 20%;
 }
 
 .router-top{
@@ -15,20 +17,20 @@
     margin-right: .3rem;
 }
 
-/*! Partie haute img + text */
+/*! Partie haute : img + text */
 
 .text-img-container{
     display: flex;
     flex-direction: row;
-    margin-left: 26rem;
-    margin-right: 26rem;
+    margin-left: 20%;
+    margin-right: 20%;
     margin-top: 1.5rem;
     align-items: center;
 }
 
 .catalog-img{
-    width: 700px;
-    height: 550px;
+    width: 40%;
+    
     border-radius: 50px;
     margin-top: 4rem;
 }
@@ -73,7 +75,7 @@
     align-self: center;
 }
 
-/*! Partie basse filtre */
+/*! Partie centre : filtre */
 
 .filter-bar-container{
     display: flex;
@@ -81,10 +83,14 @@
     border-top: solid 1px rgb(126, 116, 116);
     border-bottom: solid 1px rgb(126, 116, 116);
     padding: 1rem;
-    margin-left: 26rem;
-    margin-right: 26rem;
+    margin-left: 20%;
+    margin-right: 20%;
     margin-top: 3rem;
     margin-bottom: 3rem;
+    background-color: var(--secondary-color);
+    position: sticky;
+    top: 0rem;
+    z-index: 1;
 }
 
 .filter-btn{
@@ -105,7 +111,122 @@
     width: 30px;
     margin-bottom: -.5rem;
     margin-left: .5rem;
+    margin-right: 1.5rem;
 }
 .filter-logo:hover{
     cursor: pointer;
+}
+
+.sort-by-title{
+    align-self: center;
+    margin-left: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.choice-text{
+    font-size: 1rem;
+    align-self: center;
+    margin-left: 1rem;
+}
+
+/*! Partie centre : filtre gauche */
+
+.filter-left-and-cards-container{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20%;
+    margin-right: 20%; 
+}
+
+.filter-left-container{
+    width: 25%;
+    border-right: 1px solid rgb(126, 116, 116);
+    margin-bottom: 3rem;
+    
+}
+
+.filter-left-origine{
+    position: sticky;
+    top: 9rem;
+}
+
+.filter-left-caracteristic{
+    margin-top: 2rem;
+    border-top: 1px solid rgb(126, 116, 116);
+    margin-right: 3rem;
+    position: sticky;
+    top: 13rem;
+}
+
+.filtre-left-title{
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.arrow-filter-left{
+    width: .8rem;
+    padding-left: 1rem;
+}
+
+/*! Partie centre : cards */
+
+.catalog-cards-container{
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 75%;
+    justify-items: center;
+    margin-bottom: 1rem;
+}
+
+.catalog-card-link{
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.catalog-card{
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    width: 300px;
+    border-radius: 25px;
+    margin-left: 1rem;
+    margin-right: 1rem;  
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    margin-bottom: 2rem;
+}
+.catalog-card:hover{
+    position: relative;
+    bottom: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 19px 38px, rgba(0, 0, 0, 0.32) 0px 15px 12px;
+}
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img{
+    width: 90%;
+    height: 200px;
+    align-self: center;
+    margin-top: 1rem;
+    border-radius: 25px;
+    border: 3px solid var(--third-color);
+}
+
+.card-title{
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+.card-origine{
+    margin: .5rem;
+    margin-left: 1rem;
+}
+
+.card-carac{
+    margin: .5rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
 }
