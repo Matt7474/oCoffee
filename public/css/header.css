@@ -1,5 +1,6 @@
 header{
     width: 100%;
+    margin-top: 0rem;
     background-color: var(--fourth-color);
     background-image: url("../images/images-background/planche.jpg");
     background-size: 100%;

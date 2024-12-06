@@ -1,24 +1,4 @@
-/*! Partie haute : route */
 
-.router-top-container{
-    margin-top: 0rem;
-    margin-left: 20%;
-}
-
-.router-top{
-    text-decoration: none;
-    color: var(--main-color);
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.router-arrow{
-    width: .8rem;
-    rotate: -90deg;
-    margin-left: .3rem;
-    margin-right: .3rem;
-    margin-top: 6.5rem;
-}
 
 /*! Partie haute : img + text */
 

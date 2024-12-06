@@ -43,6 +43,9 @@ footer{
     text-decoration: none;
     color: var(--main-color);
 }
+.arrow-up-text:hover{
+    color: var(--third-color);
+}
 
 /*! Partie titre & logo !*/
 

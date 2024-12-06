@@ -18,7 +18,7 @@ app.use(express.urlencoded({extended : true}))
 app.use(router);
 
 app.use((req, res) => {
-    res.status(404).render("error404")
+    res.status(404).render("404")
 });
 
 

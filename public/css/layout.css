@@ -17,3 +17,42 @@ body{
 strong{
     font-weight: bold;
 }
+
+.primary-container{
+    padding-top: 1rem;
+}
+
+.primary-container-404{
+    justify-self: center;
+}
+.text-404{
+    justify-self: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--main-color);
+}
+
+/*! Partie haute : route */
+
+.router-top-container{
+    margin-top: 0rem;
+    margin-left: 20%;
+}
+
+.router-top{
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.router-arrow{
+    width: .8rem;
+    rotate: -90deg;
+    margin-left: .3rem;
+    margin-right: .3rem;
+    margin-top: 6.5rem;
+}
+
+/*! Partie : */
