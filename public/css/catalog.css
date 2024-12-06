@@ -1,0 +1,72 @@
+.router-top-container{
+    margin-top: 1.5rem;
+    margin-left: 3rem;
+}
+
+.router-top{
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.router-arrow{
+    width: .6rem;
+    rotate: -90deg;
+    margin-left: .3rem;
+    margin-right: .3rem;
+}
+
+/*! Partie haute img + text */
+
+.text-img-container{
+    display: flex;
+    flex-direction: row;
+    margin: 3rem;
+    margin-top: 1.5rem;
+}
+
+.catalog-img{
+    width: 30%;
+    border-radius: 50px;
+}
+
+.catalog-text-title-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 3rem;
+    text-align: justify;
+    justify-content: center;
+}
+
+.catalog-text-title{
+    color: var(--main-color);
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+}
+
+.catalog-text{
+    color: var(--main-color);
+    line-height: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.catalog-btn-show{
+    color: var(--main-color);
+    background-color: var(--fourth-color);
+    text-decoration: none;
+    width: 30%;
+    height: 3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid var(--main-color);
+    border-radius: 15px;
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+/*! Partie basse img + cards */

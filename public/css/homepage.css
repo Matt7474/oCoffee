@@ -24,11 +24,13 @@
     font-weight: bold;
     margin-bottom: 1.5rem;
     margin-top: 1rem;
+    color: var(--main-color);
 }
 
 .homepage-text{
     line-height: 1.5rem;
     font-size: 1.1rem;
+    text-align: justify;
 }
 
 .hidden-img-container{
