@@ -1,20 +1,23 @@
 /*! Partie haute : route */
 
 .router-top-container{
-    margin-top: 1.5rem;
+    margin-top: 0rem;
     margin-left: 20%;
 }
 
 .router-top{
     text-decoration: none;
     color: var(--main-color);
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .router-arrow{
-    width: .6rem;
+    width: .8rem;
     rotate: -90deg;
     margin-left: .3rem;
     margin-right: .3rem;
+    margin-top: 6.5rem;
 }
 
 /*! Partie haute : img + text */
@@ -24,7 +27,6 @@
     flex-direction: row;
     margin-left: 20%;
     margin-right: 20%;
-    margin-top: 1.5rem;
     align-items: center;
 }
 
@@ -87,10 +89,6 @@
     margin-right: 20%;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    background-color: var(--secondary-color);
-    position: sticky;
-    top: 0rem;
-    z-index: 1;
 }
 
 .filter-btn{
@@ -117,13 +115,11 @@
     cursor: pointer;
 }
 
-.sort-by-container{
-    display: flex;
-    align-items: center;
-}
+.sort-by-container
 
 .sort-by-title{
-    align-self: center;  
+    align-self: center;
+    justify-self: unset;
     margin-left: 1.5rem;
     font-size: 1.3rem;
 }

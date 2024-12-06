@@ -1,9 +1,13 @@
 header{
     width: 100%;
     background-color: var(--fourth-color);
+    background-image: url("../images/images-background/planche.jpg");
+    background-size: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    z-index: 10;
 }
 
 /*! Partie titre & logo !*/
@@ -57,7 +61,7 @@ header{
         margin-right: 4rem;
         background-color: var(--secondary-color);
         border-radius: 25px;
-        border: 2px solid transparent;
+        border: 1px solid var(--main-color);
         text-indent: 10px;
         font-size: 1rem;
     }
@@ -65,13 +69,13 @@ header{
         outline: none;
     } 
     .header-searchbar::placeholder {
-    text-indent: 10px;
+        text-indent: 10px;
     }
     .header-searchbar-button{
         width: 0px;
         height: 0px;
         border: none;
-        background-color: var(--fourth-color);
+        background-color: transparent
     }
     .header-searchbar-glass{
         width: 1.3rem;
@@ -92,7 +96,6 @@ header{
 }
 
 .header-burger-menu-button{
-    background-color: var(--fourth-color);
     border: none;
 }
 

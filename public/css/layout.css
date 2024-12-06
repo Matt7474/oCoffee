@@ -8,6 +8,10 @@
 
 body{
     background-color: var(--secondary-color);
+    background-image: url("../images/images-background/planche.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
+    
 }
 
 strong{

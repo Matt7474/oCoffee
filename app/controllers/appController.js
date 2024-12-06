@@ -8,7 +8,11 @@ const appController = {
 
     async catalog(req, res) {
         res.render("catalog")
-    }
+    },
+
+    async product(req, res) {
+        res.render("product")
+    },
 };
 
 
