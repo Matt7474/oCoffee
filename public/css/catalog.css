@@ -117,8 +117,13 @@
     cursor: pointer;
 }
 
+.sort-by-container{
+    display: flex;
+    align-items: center;
+}
+
 .sort-by-title{
-    align-self: center;
+    align-self: center;  
     margin-left: 1.5rem;
     font-size: 1.3rem;
 }
