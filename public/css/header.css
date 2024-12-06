@@ -214,3 +214,12 @@ header{
     width: 30px;
     margin-right: 1.5rem;
 }
+
+
+
+
+
+/*! hidden-menu doit rester à la fin du script !*/
+.hidden-menu{
+    display: none;
+}

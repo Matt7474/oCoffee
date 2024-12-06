@@ -1,11 +1,11 @@
 
-// Fonction qui affiche ou masque le menu de gauche au click sur le menu
-const leftMenuElem = document.querySelector(".left-menu-container");
-const burgerMenuElem = document.querySelector("#menu");
+// Fonction qui affiche ou masque le menu de droite au click sur le menu burger
+const menuElemBtn = document.querySelector(".menu-container");
+const burgerMenuElem = document.querySelector(".header-logo-oCoffee");
 
 burgerMenuElem.addEventListener("click", function (event) {
     event.preventDefault();
-    leftMenuElem.classList.toggle("hidden2");
+    menuElemBtn.classList.toggle("hidden-menu");
 });
 
 
