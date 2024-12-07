@@ -5,7 +5,8 @@
     "express": "^4.21.1",
     "express-session": "^1.18.1",
     "nodemon": "^3.1.7",
-    "pg": "^8.13.1"
+    "pg": "^8.13.1",
+    "sequelize": "^6.37.5"
   },
   "name": "ocoffee-v2",
   "version": "2.0.0",
@@ -15,10 +16,11 @@
   "directories": {
     "doc": "docs"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node --watch index.js"
+    "dev": "node --watch index.js",
+    "create:db": "psql -U ocoffee < DB/coffee_db.sql",
+    "db:reset": "npm run create:db && "
   },
   "author": "Matt",
   "license": "ISC"

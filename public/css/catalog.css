@@ -62,14 +62,17 @@
 .filter-bar-container{
     display: flex;
     flex-direction: row;
-    border-top: solid 1px rgb(126, 116, 116);
-    border-bottom: solid 1px rgb(126, 116, 116);
+    border-top: solid 2px rgb(126, 116, 116);
+    border-bottom: solid 2px rgb(126, 116, 116);
     padding: 1rem;
     margin-left: 20%;
     margin-right: 20%;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    align-items: center
+    align-items: center;
+    position: sticky;
+    top: -4px;
+    z-index: 11;
 }
 
 .filter-btn{
@@ -80,7 +83,7 @@
     border: none;
     font-size: 1.3rem;
     padding: .5rem;
-    border-right: 1px solid rgb(126, 116, 116);
+    border-right: 2px solid rgb(126, 116, 116);
 }
 .filter-btn:hover{
     cursor: pointer;
@@ -122,33 +125,47 @@
 
 .filter-left-container{
     width: 25%;
-    border-right: 1px solid rgb(126, 116, 116);
+    height: 100%;
+    border-right: 2px solid rgb(126, 116, 116);
     margin-bottom: 3rem;
-    
+    position: sticky;
+    top: 7rem;
 }
 
 .filter-left-origine{
-    position: sticky;
-    top: 9rem;
+    /* position: sticky;
+    top: 9rem; */
 }
 
 .filter-left-caracteristic{
     margin-top: 2rem;
-    border-top: 1px solid rgb(126, 116, 116);
+    border-top: 2px solid rgb(126, 116, 116);
     margin-right: 3rem;
-    position: sticky;
-    top: 13rem;
+    /* position: sticky;
+    top: 13rem; */
 }
 
-.filtre-left-title{
+.filter-left-title{
     margin-top: 1.5rem;
     font-size: 1.3rem;
     font-weight: bold;
+    margin-bottom: 1rem;
 }
 
 .arrow-filter-left{
     width: .8rem;
     padding-left: 1rem;
+}
+
+.filter-left-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-checkbox-align{
+    display: flex;
+    flex-direction: row;
+    font-size: 1.2rem;
 }
 
 /*! Partie centre : cards */

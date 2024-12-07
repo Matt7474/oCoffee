@@ -40,38 +40,22 @@
             <div class="homepage-cards-container">
                 <a href="/produit/" class="arrow-container"><img src="/images/arrow-up.svg" alt="fleche" class="arrow-left"></a>
                 <!-- card -->
+                <% if (locals.coffees?.length) { %>
+                <% for( let i = 0; i < coffees.length; i++ ) { %>
+                
                     <div class="homepage-card">
                         <a href="/catalog" class="homepage-card-link">
                             <div class="card-container">
-                                <img src="/images/cafe-database/Espresso.jpg" alt="img-Espresso" class="card-img">
-                                <h3 class="card-title">Espresso</h3>
-                                <p class="card-origine"><strong>Origine : </strong>Italie</p>
-                                <p class="card-carac"><strong>Caractéristique : </strong>Corsé</p>
+                                <img src="/images/cafe-database/<%= coffees[i].name %>.jpg" alt="img-<%= coffees[i].name %>" class="card-img">
+                                <h3 class="card-title"><%= coffees[i].name %></h3>
+                                <p class="card-origine"><strong>Origine : </strong><%= coffees[i].origin.name %></p>
+                                <p class="card-carac"><strong>Caractéristique : </strong><%= coffees[i].caracteristic.carac %></p>
                             </div>
                         </a> 
                     </div>
-                <!-- card -->
-                <div class="homepage-card">
-                    <a href="/produit/" class="homepage-card-link">
-                        <div class="card-container">
-                            <img src="/images/cafe-database/Hawaiian%20Kona.jpg" alt="img-Hawaiian-Kona" class="card-img">
-                            <h3 class="card-title">Hawaiian Kona</h3>
-                            <p class="card-origine"><strong>Origine : </strong>Hawaï</p>
-                            <p class="card-carac"><strong>Caractéristique : </strong>Doux</p>
-                        </div>
-                    </a> 
-                </div>
-                <!-- card -->
-                <div class="homepage-card">
-                    <a href="/produit/" class="homepage-card-link">
-                        <div class="card-container">
-                            <img src="/images/cafe-database/Peruvian%20Arabica.jpg" alt="img-Peruvian-Arabica" class="card-img">
-                            <h3 class="card-title">Peruvian Arabica</h3>
-                            <p class="card-origine"><strong>Origine : </strong>Pérou</p>
-                            <p class="card-carac"><strong>Caractéristique : </strong>Chocolaté</p>    
-                        </div>
-                    </a> 
-                </div>
+                <% } %>
+                <% } %> 
+        
                 <a href="/" class="arrow-container"><img src="/images/arrow-up.svg" alt="fleche" class="arrow-right"></a>
             </div>
         </div>   
