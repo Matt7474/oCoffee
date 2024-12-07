@@ -1,0 +1,15 @@
+%%mocodo
+:
+COMPTER: #id 1 > ORIGIN > id, _#id 2 > COFFEE > id
+:
+COFFEE: id, name, reference, description, price_kilo, origin_id, caracteristic_id, disponibility_id, created_at, updated_at, #id 2 > DISPONIBILITY > id, #id 3 > CARACTERISTIC > id
+:::
+DISPONIBILITY: id, dispo
+:
+
+
+:
+ORIGIN: id, name
+:::
+CARACTERISTIC: id, carac
+:::

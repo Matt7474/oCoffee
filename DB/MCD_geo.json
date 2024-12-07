@@ -1,0 +1,31 @@
+{
+  "width": 467,
+  "height": 315,
+  "cx": [
+    [ "COMPTER", 46 ],
+    [ "COFFEE", 166 ],
+    [ "ETRE", 299 ],
+    [ "DISPONIBILITY", 406 ],
+    [ "ORIGIN", 46 ],
+    [ "APPARTIENT", 166 ],
+    [ "CARACTERISTIC", 299 ]
+  ],
+  "cy": [
+    [ "COMPTER", 111 ],
+    [ "COFFEE", 111 ],
+    [ "ETRE", 111 ],
+    [ "DISPONIBILITY", 111 ],
+    [ "ORIGIN", 272 ],
+    [ "APPARTIENT", 272 ],
+    [ "CARACTERISTIC", 272 ]
+  ],
+  "shift": [
+    [ "COMPTER,ORIGIN,0", 0 ],
+    [ "COMPTER,COFFEE,0", 0 ],
+    [ "ETRE,DISPONIBILITY,0", 0 ],
+    [ "ETRE,COFFEE,0", 0 ],
+    [ "APPARTIENT,CARACTERISTIC,0", 0 ],
+    [ "APPARTIENT,COFFEE,0", 0 ]
+  ],
+  "ratio": []
+}

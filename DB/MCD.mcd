@@ -1,0 +1,9 @@
+COMPTER, 0N ORIGIN, 1N COFFEE
+COFFEE: id, name, reference, description, price_kilo, origin_id, caracteristic_id, disponibility_id, created_at, updated_at
+ETRE, 0N DISPONIBILITY, 01 COFFEE
+DISPONIBILITY: id, dispo
+
+ORIGIN: id, name
+APPARTIENT, 0N CARACTERISTIC, 01 COFFEE
+CARACTERISTIC: id, carac
+:

@@ -186,7 +186,7 @@ header{
     font-size: 1.5rem;
     font-weight: bold;
     display: flex;
-    padding-left: 1.5rem;
+    padding-left: 0rem;
     position: relative;
     top: 2.5rem;
     text-decoration: none;
@@ -208,6 +208,13 @@ header{
 .menu-link:hover {
     background-position: 0 0;
     color: var(--secondary-color);
+}
+
+.marker-menu-link{
+    width: .5rem;
+    background-color: var(--third-color);
+    left: 0px;
+    margin-right: 1.4rem;
 }
 
 .coffee-beam{
