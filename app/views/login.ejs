@@ -1,0 +1,71 @@
+<%- include('partials/header') %>
+<link rel="stylesheet" href="/css/login.css">
+
+    <main>
+        <p class="text-on-dev">Page en cours de developpement !</p>
+        <form>
+            
+            <fieldset>
+                
+
+                <img class="stamp" src="/images/logo/timbre.svg">
+                <legend>Livraison :</legend>
+                <div class="form-container-identity">
+                    <div class="identity">Vous êtes :</div>
+                        <div class="genre-Mr-Mme-container">
+                            <input type="radio" value="genre-Mr" name="genre" id="genre-Mr" required>
+                            <label class="genre-Mr-Mme" for="genre-Mr">Mr</label>
+                        </br>
+                            <input type="radio" value="genre-Mme" name="genre" id="genre-Mme" required>
+                            <label class="genre-Mr-Mme" for="genre-Mme">Mme</label>
+                        </br>
+                            <input type="radio" value="genre-no-genre" name="genre" id="genre-no-genre" required>
+                            <label class="genre-Mr-Mme" for="genre-no-genre">Non genré</label>
+                        </div>
+                    </br>
+                    <div >
+                        <p class="form-ref">Nom :</p>
+                        <input class="champ" type="text" name="last-name" id="last-name" placeholder="Doe" size="35" required>
+                        
+                        <p class="form-ref">Prénom :</p>
+                        <input class="champ" type="text" name="first-name" id="first-name" placeholder="John" size="35" required>
+                        
+                        <p class="form-ref">Email :</p>
+                        <input class="champ" type="email" name="mail" id="mail" placeholder="john.doe@fictif.com" size="35" required>
+                        
+                        <p class="form-ref">Tel :</p>
+                        <input class="champ" type="tel" name="tel" id="tel" pattern="^0[1-9]\d{8}$" placeholder="0612345678" size="35" required>
+                    </div>
+                    
+                   
+                </div>    
+                <div class="form-container-address">
+                    <div class="address">Adresse de livraison :</div>
+                    
+                        <div>
+                            <p class="form-ref" >N° :</p>
+                            <input class="champ" type="number" name="number-rue" id="number-rue" placeholder="10" size="3" required>
+                            <p class="form-ref" >Rue :</p>
+                            <input class="champ" type="text" name="rue" id="rue" placeholder="rue de Penthièvre" size="35" required>
+                            <p class="form-ref" >Code postal :</p>
+                            <input class="champ" type="text" name="zip-code" id="zip-code" placeholder="75008" size="35" required>
+                            <p class="form-ref" >Ville:</p>
+                            <input class="champ" type="text" name="city" id="city" placeholder="Paris" size="35" required>
+                        </div>
+                    </div>
+                </fieldset>        
+                <button type="submit" class="cart-hover-submit">
+                    Connexion
+                </button>
+        </form>
+        <section class="">
+            <div class="">
+
+
+            </div>
+
+
+        </section>
+    </main>
+  
+<%- include('partials/footer') %>

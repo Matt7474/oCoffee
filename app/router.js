@@ -1,11 +1,13 @@
 import { Router } from 'express';
 import { appController } from './controllers/appController.js';
+import { loginController } from './controllers/loginController.js';
 
 const router = Router();
 
 router.get('/', appController.homepage);
-router.get('/catalog', appController.catalog);
-router.get('/product/:id(\\d+)', appController.product);
-// :id(\\d+)
+router.get('/catalogue', appController.catalog);
+router.get('/produit/:id(\\d+)', appController.product);
+
+router.get('/compte', loginController.index);
 
 export { router };

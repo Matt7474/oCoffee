@@ -3,7 +3,7 @@
 
     <main>
         <div class="router-top-container">
-            <a href="/" class="router-top">Accueil</a><img src="/images/arrow-up.svg" alt="arrow" class="router-arrow"><a href="/catalog" class="router-top">Catalogue</a>
+            <a href="/" class="router-top">Accueil</a><img src="/images/arrow-up.svg" alt="arrow" class="router-arrow"><a href="/catalogue" class="router-top">Catalogue</a>
         </div>
         <!--! Partie haute img + text -->
         <div class="text-img-container">
@@ -27,7 +27,7 @@
                 <!-- <div class="catalog-btn-show">Voir notre catalogue complet</div> -->
             </div>
         </div>        
-        <!--! Partie centre : cards + text -->
+        <!--! Partie centre : cartes + text -->
         <div class="filter-bar-container" >
             <button class="filter-btn"><strong>Filtrer</strong><img class="filter-logo" alt="filter-logo" src="/images/filter-logo.svg"></button>
             <div class="sort-by-container">
@@ -37,7 +37,7 @@
             
         </div>
 
-        <!--! Partie centre : filtre gauche & cards -->
+        <!--! Partie centre : filtre gauche & cartes -->
         <div class="filter-left-and-cards-container">
             <div class="filter-left-container">
                 <div class="filter-left-origine">
@@ -54,6 +54,7 @@
                     </div>    
                 </div>
 
+                <!--! Partie gauche : filtre -->
                 <div class="filter-left-caracteristic">
                     <h3 class="filter-left-title">Caractéristique<img src="/images/arrow-up.svg" alt="arrow" class="arrow-filter-left"></h3>
                     <div class="filter-left-section">
@@ -88,11 +89,12 @@
             </div>
             <div class="catalog-cards-container">
 
+                <!--! Partie gauche : cartes -->
                 <% if (locals.coffees?.length) { %>
                 <% for( let i = 0; i < coffees.length; i++ ) { %>
                 <!-- card -->
                 <div class="catalog-card">
-                    <a href="/product/<%= coffees[i].id %>" class="catalog-card-link">
+                    <a href="/produit/<%= coffees[i].id %>" class="catalog-card-link">
                         <div class="card-container">
                             <img src="/images/cafe-database/<%= coffees[i].name %>.jpg" alt="img-<%= coffees[i].name %>" class="card-img">
                             <h3 class="card-title"><%= coffees[i].name %></h3>
