@@ -22,10 +22,10 @@ strong{
     padding-top: 1rem;
 }
 
-.primary-container-404{
+.primary-container-error{
     justify-self: center;
 }
-.text-404{
+.text-error{
     justify-self: center;
     font-size: 1.5rem;
     font-weight: bold;
