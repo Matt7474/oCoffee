@@ -10,7 +10,6 @@ const appController = {
             order: [['id', 'DESC']],
             include: ['origin', 'caracteristic']
         })
-        // console.log(coffees);
     
         res.render("homepage", { coffees })
     },
@@ -19,19 +18,29 @@ const appController = {
 
         const coffees = await Coffee.findAll({
             order: [['id', 'ASC']],
-            include: ['origin', 'caracteristic']
+            include: ['origin', 'caracteristic', 'disponibility']
         })
 
         const allCaracteristics = coffees.map(coffee => coffee.caracteristic.carac);
         const uniqueCarac = [...new Set(allCaracteristics)];
 
-        console.log(uniqueCarac);
+        const allDisponibilities = coffees.map(coffee => coffee.disponibility.dispo);
+        const uniqueDispo = [...new Set(allDisponibilities)];
 
-        res.render("catalog", { coffees, uniqueCarac })
+        console.log(uniqueDispo);
+
+        res.render("catalog", { coffees, uniqueCarac, uniqueDispo })
     },
 
     async product(req, res) {
-        res.render("product")
+        const {id} = req.params;
+        console.log(id);
+
+        const coffee = await Coffee.findByPk(id,{
+            include: ['origin', 'caracteristic', 'disponibility']
+        });        
+        
+        res.render("product", { coffee })
     },
 };
 

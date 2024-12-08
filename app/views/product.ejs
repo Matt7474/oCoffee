@@ -1,21 +1,36 @@
 <%- include('partials/header') %>
-<link rel="stylesheet" href="/css/catalog.css">
+<link rel="stylesheet" href="/css/product.css">
 
     <main>
-        
-                <!-- card -->
-                <div class="catalog-card">
-                    <a href="/product/" class="catalog-card-link">
-                        <div class="card-container">
-                            <img src="/images/cafe-database/Espresso.jpg" alt="img-Espresso" class="card-img">
-                            <h3 class="card-title">Espresso</h3>
-                            <p class="card-origine"><strong>Origine : </strong>Italie</p>
-                            <p class="card-carac"><strong>Caractéristique : </strong>Corsé</p>
-                        </div>
-                    </a> 
+        <div class="router-top-container">
+            <a href="/" class="router-top">Accueil</a>
+            <img src="/images/arrow-up.svg" alt="arrow" class="router-arrow">
+            <a href="/catalog" class="router-top">Catalogue</a>
+            <img src="/images/arrow-up.svg" alt="arrow" class="router-arrow">
+            <a href="#" class="router-top"><%= coffee.name %></a>
+        </div>
+        <div class="product-container">
+            <div class="product-card-container">
+                <img src="/images/cafe-database/<%= coffee.name %>.jpg" alt="img-Espresso" class="product-img">
+                <div class="product-title-date-container">
+                    <h3 class="card-title"><%= coffee.name %></h3>
+                    <div class="product-date-ref-container">
+                        <p class="product-date">Ajouté le <%= coffee.created_at.toLocaleDateString('fr-FR', { day: '2-digit'
+        , month: '2-digit' , year: 'numeric' }) %></p>
+                        <p class="product-ref">Ref : <%= coffee.reference %></p>
+                    </div>
                 </div>
-                
-        
+                <p class="card-origine"><strong>Origine : </strong><%= coffee.origin.name %></p>
+                <p class="card-carac"><strong>Caractéristique : </strong><%= coffee.caracteristic.carac %></p>
+                <p class="cart-description"><strong>Description : </strong><%= coffee.description %></p>
+                <div class="card-price-dispo-container">
+                    <p class="card-price"><strong>Prix au kilo : </strong><%= new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(coffee.price_kilo) %></p>
+                    <p class="card-dispo"><strong>Disponible : </strong><%= coffee.disponibility.dispo %></p>
+                </div>
+            
+            
+            </div>
+        </div>
     </main>
   
 <%- include('partials/footer') %>

@@ -5,7 +5,7 @@ const router = Router();
 
 router.get('/', appController.homepage);
 router.get('/catalog', appController.catalog);
-router.get('/product/', appController.product);
+router.get('/product/:id(\\d+)', appController.product);
 // :id(\\d+)
 
 export { router };

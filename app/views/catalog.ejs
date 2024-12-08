@@ -53,6 +53,7 @@
                         <% } %> 
                     </div>    
                 </div>
+
                 <div class="filter-left-caracteristic">
                     <h3 class="filter-left-title">Caractéristique<img src="/images/arrow-up.svg" alt="arrow" class="arrow-filter-left"></h3>
                     <div class="filter-left-section">
@@ -68,6 +69,22 @@
 
                     </div>
                 </div>
+
+                <div class="filter-left-disponibility">
+                    <h3 class="filter-left-title">Caractéristique<img src="/images/arrow-up.svg" alt="arrow" class="arrow-filter-left"></h3>
+                    <div class="filter-left-section">
+
+                        <% if (locals.uniqueDispo?.length) { %>
+                            <% for( let d = 0; d < uniqueDispo.length; d++ ) { %>
+                                <div class="filter-checkbox-align">   
+                                    <input type="checkbox" id="<%= uniqueDispo[d] %>">
+                                    <label for="<%= uniqueDispo[d] %>"><%= uniqueDispo[d] %></label>
+                                </div> 
+                            <% } %>
+                        <% } %> 
+
+                    </div>
+                </div>
             </div>
             <div class="catalog-cards-container">
 
@@ -75,7 +92,7 @@
                 <% for( let i = 0; i < coffees.length; i++ ) { %>
                 <!-- card -->
                 <div class="catalog-card">
-                    <a href="/product/<%= coffees[i].name %>" class="catalog-card-link">
+                    <a href="/product/<%= coffees[i].id %>" class="catalog-card-link">
                         <div class="card-container">
                             <img src="/images/cafe-database/<%= coffees[i].name %>.jpg" alt="img-<%= coffees[i].name %>" class="card-img">
                             <h3 class="card-title"><%= coffees[i].name %></h3>
