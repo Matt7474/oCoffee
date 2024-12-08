@@ -27,14 +27,14 @@ const appController = {
         const allDisponibilities = coffees.map(coffee => coffee.disponibility.dispo);
         const uniqueDispo = [...new Set(allDisponibilities)];
 
-        console.log(uniqueDispo);
+        // console.log(uniqueDispo);
 
         res.render("catalog", { coffees, uniqueCarac, uniqueDispo })
     },
 
     async product(req, res) {
         const {id} = req.params;
-        console.log(id);
+        // console.log(id);
 
         const coffee = await Coffee.findByPk(id,{
             include: ['origin', 'caracteristic', 'disponibility']
