@@ -1,0 +1,96 @@
+<%- include('partials/header') %>
+<link rel="stylesheet" href="/css/login.css">
+
+    <main>
+        <div class="router-top-container">
+            <a href="/" class="router-top">Accueil</a><img src="/images/arrow-up.svg" alt="arrow" class="router-arrow"><a href="/catalogue" class="router-top">Catalogue</a>
+        </div>
+        <div class="login-container">
+            <div class="sign-container">
+            <form method="POST" class="sign-in" action="/signup">
+                <!--! Partie pas de compte -->
+                <fieldset class="sign-up">
+                    <legend>Vous n'avez pas de compte ?</legend>
+                    <div class="form-container-identity">
+                        <div class="identity">Vous êtes : *</div>
+                            <div class="genre-Mr-Mme-container">
+                                <input type="radio" value="Mr" name="genre" id="genre-Mr" required>
+                                <label class="genre-Mr-Mme" for="genre-Mr">Mr</label>
+                            <br>
+                                <input type="radio" value="Mme" name="genre" id="genre-Mme" required>
+                                <label class="genre-Mr-Mme" for="genre-Mme">Mme</label>
+                            <br>
+                                <input type="radio" value="non genré" name="genre" id="genre-no-genre" required>
+                                <label class="genre-Mr-Mme" for="genre-no-genre">Non genré</label>
+                            </div>
+                        <br>
+                        <div >
+                            <label for="last-name" class="form-ref">Nom : *</label><br>
+                            <input class="champ" type="text" name="lastname" id="last-name" placeholder="Doe" size="35" required><br>
+                            
+                            <label for="first-name" class="form-ref">Prénom : *</label><br>
+                            <input class="champ" type="text" name="firstname" id="first-name" placeholder="John" size="35" required><br>
+                            
+                            <label for="mail" class="form-ref">Email : *</label><br>
+                            <input class="champ" type="email" name="mail" id="mail" placeholder="john.doe@fictif.com" size="35" required><br>
+                            
+                            <label for="password" class="form-ref">Mot de passe : *</label><br>
+                            <input class="champ" type="password" name="password" id="password" placeholder="mot de passe" size="35" required><br>
+                           
+                            <label for="password-confirmation" class="form-ref">Confirmation du mot de passe : *</label><br>
+                            <input class="champ" type="password" name="passwordconfirmation" id="password-confirmation" placeholder="confirmation du mot de passe" size="35" required><br>
+                           
+                        </div>
+                    </div>   
+                    <button type="submit" class="form-signup-submit">
+                        S'enregister
+                    </button>
+                </fieldset> 
+            </form>
+            <form class="sign-in">
+                <!--! Partie compte existant -->
+                <fieldset class="sign-in">
+                    <legend>Vous avez déjà un compte ?</legend>
+                        <div >
+                            <label for="mail" class="form-ref">Email : *</label><br>
+                            <input class="champ" type="email" name="mail" id="mail" placeholder="john.doe@fictif.com" size="35" required><br>
+                            
+                            <label for="password" class="form-ref">Mot de passe : *</label><br>
+                            <input class="champ" type="password" name="password" id="password" placeholder="mot de passe" size="35" required><br>
+                        </div>
+                        <button type="submit" class="form-signup-submit">
+                            Se Connecter
+                        </button>
+                    </div>   
+                </fieldset> 
+
+                    <!--! Partie adresse a mettre dans les modifs de compte -->
+                    <!-- <div class="form-container-address">
+                        <div class="address">Adresse de livraison :</div>
+                            <div class="champ-number-container">
+                                <div class="champ-container">
+                                    <label for="number-rue" class="form-ref" >N° :</label><br>
+                                    <input class="champ-number" type="number" name="number-rue" id="number-rue" placeholder="10">
+                                </div>
+                                <div class="champ-container">
+                                    <label for="compl" class="form-ref" >Compl :</label><br>
+                                    <input class="champ-number" type="text" name="compl" id="compl" placeholder="bis" size="3"><br>
+                                </div>
+                            </div>
+                            <label for="rue" class="form-ref" >Rue :</label><br>
+                            <input class="champ" type="text" name="rue" id="rue" placeholder="rue de Penthièvre" size="35"><br>
+                            <label for="zip-code" class="form-ref" >Code postal :</label><br>
+                            <input class="champ" type="text" name="zip-code" id="zip-code" placeholder="75008" size="35"><br>
+                            <label for="city" class="form-ref" >Ville:</label><br>
+                            <input class="champ" type="text" name="city" id="city" placeholder="Paris" size="35"><br>
+                            <label for="tel" class="form-ref">Tel :</label><br>
+                            <input class="champ" type="tel" name="tel" id="tel" pattern="^0[1-9]\d{8}$" placeholder="0612345678" size="35"><br>
+                    </div> -->
+                        
+                       
+            </form>
+        </div>
+    </main>
+<%- include('partials/footer') %>
+
+

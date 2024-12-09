@@ -1,0 +1,115 @@
+.login-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.text-on-dev{
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+fieldset{
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    background-color: var(--secondary-color);
+}
+
+legend, .identity, .address{
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.sign-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 3rem;
+}
+
+/*! Partie Identité !*/
+.form-container-identity{
+    margin-bottom: 2rem;
+}
+
+.genre-Mr-Mme-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+input[type="radio"]:checked:before {
+    content: "";
+    display: block;
+    position: relative;
+    top: 3px;
+    left: 3px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: red;
+}
+
+
+
+
+
+
+.champ, .champ-number{
+    margin-top: .3rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border: 1px solid var(--main-color);
+    height: 1.4rem;
+    text-indent: 10px;
+}
+.champ:focus{
+    outline: auto;
+}
+
+.champ-number-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.champ-container{
+    margin-right: 5rem;
+}
+
+.champ-number{
+    width: 4rem;
+}
+
+
+/*! Partie Adresse !*/
+.form-container-address{
+
+}
+
+.form-signup-submit{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    margin-top: 2rem;
+    height: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid var(--main-color);
+    padding:1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.form-signup-submit:hover{
+    background-color: var(--third-color);
+    color: var(--secondary-color);
+}

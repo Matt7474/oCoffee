@@ -27,13 +27,13 @@
                     
                     <div class="hidden-img-container">
                         <img src="/images/cafe-client/105589090.png" alt="img-homepage" class="img-homepage-hidden">
-                        <a href="/catalog" class="btn-catalogue-hidden">Voir notre catalogue</a>
+                        <a href="/catalogue" class="btn-catalogue-hidden">Voir notre catalogue</a>
                     </div>
 
                 </div>   
                 <div class="img-and-btn-container">
                     <img src="/images/cafe-client/105589090.png" alt="img-homepage" class="img-homepage">
-                    <a href="/catalog" class="btn-catalogue">Voir notre catalogue</a>
+                    <a href="/catalogue" class="btn-catalogue">Voir notre catalogue</a>
                 </div>
             </div>
             <p class="homepage-cards-title">Nos dernières nouveautés</p>
@@ -44,7 +44,7 @@
                 <% for( let i = 0; i < coffees.length; i++ ) { %>
                 
                     <div class="homepage-card">
-                        <a href="/product/<%= coffees[i].id %>" class="homepage-card-link">
+                        <a href="/produit/<%= coffees[i].id %>" class="homepage-card-link">
                             <div class="card-container">
                                 <img src="/images/cafe-database/<%= coffees[i].name %>.jpg" alt="img-<%= coffees[i].name %>" class="card-img">
                                 <h3 class="card-title"><%= coffees[i].name %></h3>

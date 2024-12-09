@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>oCoffee</title>
     <link rel="stylesheet" href="/css/reset.css">
-    <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/header.css"> 
     <link rel="stylesheet" href="/css/footer.css">
@@ -32,6 +32,10 @@
                     <a href="/" class="header-title-oCoffee">o'Coffee</a>
                 </div>
 
+                <% if (locals.user) { %>
+                    <p class="username">Bienvenue <%= locals.user.firstname %></p>
+                <% } %>
+
                 <div class="searchbar-and-menu-container">
                     <!--! Partie searchbar -->
                     <div>
@@ -46,7 +50,7 @@
                     <!--! Partie logo login et burger-menu -->
                     <div class="header-login-menu-container">
                         <div class="">
-                            <a href="#" class="header-login-menu-button"><img class="header-login-menu" alt="menu" src="/images/logo/login-main-color.svg"></a>
+                            <a href="/compte" class="header-login-menu-button"><img class="header-login-menu" alt="menu" src="/images/logo/login-main-color.svg"></a>
                         </div>
 
                         <div class="header-burger-menu-container">
@@ -56,6 +60,7 @@
                 </div>
             </div>
 
+            <!--! Partie menu droite caché -->
             <div class="menu-container hidden-menu">
                 <div class="menu-title-container">
                     <div class="cross">X</div>
@@ -74,23 +79,23 @@
 
                 <a href="/" class="menu-link">
                     <div class="marker-menu-link"></div>
-                    <img class="coffee-beam" src="/images/logo/grain-cafe.svg" />
+                    <img class="coffee-beam" src="/images/logo/grain-cafe.svg" alt="logo-coffee">
                     Accueil
                 </a>
           
-                <a href="/catalog" class="menu-link">
+                <a href="/catalogue" class="menu-link">
                     <div class="marker-menu-link"></div>
-                    <img class="coffee-beam" src="/images/logo/grain-cafe.svg" />
+                    <img class="coffee-beam" src="/images/logo/grain-cafe.svg" alt="logo-coffee">
                     Catalogue
                 </a>
           
-                <a href="/product" class="menu-link last">
+                <a href="/produit" class="menu-link last">
                     <div class="marker-menu-link"></div>
-                    <img class="coffee-beam" src="/images/logo/grain-cafe.svg" />
+                    <img class="coffee-beam" src="/images/logo/grain-cafe.svg" alt="logo-coffee">
                     Produit
                 </a>
                   
-                <a href="/product" class="menu-link last"></a>
+                <a href="/produit" class="menu-link last"></a>
 
             </div>
         </div>   

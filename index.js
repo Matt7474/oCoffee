@@ -15,6 +15,20 @@ app.use(express.static(join(import.meta.dirname, './public')));
 app.use(express.urlencoded({extended : true}))
 
 
+app.use(session({
+    secret: 'ocoffee',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { maxAge: 600000}, 
+}));
+app.use((req, res, next) => {
+    if(req.session?.user){
+        res.locals.user = req.session.user;
+    }
+    next()
+});
+
+
 app.use(router);
 
 app.use((req, res) => {
