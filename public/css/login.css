@@ -23,6 +23,13 @@ legend, .identity, .address{
     font-weight: bold;
 }
 
+.sign-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 3rem;
+}
+
 /*! Partie Identité !*/
 .form-container-identity{
     margin-bottom: 2rem;

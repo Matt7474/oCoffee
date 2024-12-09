@@ -6,6 +6,15 @@ const loginController = {
     
         res.render("login")
     },
+
+    async signup(req, res) {
+        
+        
+        console.log("je suis la !");
+        
+    
+        res.redirect("compte")
+    },
 };
 
 export { loginController }
