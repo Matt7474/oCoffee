@@ -1,5 +1,6 @@
 <%- include('partials/header') %>
 <link rel="stylesheet" href="/css/catalog.css">
+<script src="/js/catalog.js" defer></script>
 
     <main>
         <div class="router-top-container">
@@ -32,17 +33,29 @@
             <button class="filter-btn"><strong>Filtrer</strong><img class="filter-logo" alt="filter-logo" src="/images/filter-logo.svg"></button>
             <div class="sort-by-container">
                 <strong class="sort-by-title">Trier par :</strong>
-                <span class="choice-text">Alphabéthique : De A à Z</span>
+                <!-- <span class="choice-text">Alphabéthique : De A à Z</span> -->
+                <select id="sortMenu">
+                    <option value="alphabetic-asc">Alphabéthique : De A à Z</option>
+                    <option value="alphabetic-desc">Alphabéthique : De Z à A</option>
+                    <option value="price-asc">Prix au kilo : Du moins cher au plus cher</option>
+                    <option value="price-desc">Prix au kilo : Du plus cher au moins cher</option>
+                    <option value="price-asc">Date : De la plus ancienne à la plus récente</option>
+                    <option value="price-desc">Date : De la plus récente à la plus ancienne</option>
+                </select>
             </div>
             
         </div>
 
         <!--! Partie centre : filtre gauche & cartes -->
         <div class="filter-left-and-cards-container">
-            <div class="filter-left-container">
+
+            
+            <div class="filter-left-container hidden">
+
+
                 <div class="filter-left-origine">
-                    <h3 class="filter-left-title">Origines<img src="/images/arrow-up.svg" alt="arrow" class="arrow-filter-left"></h3>
-                    <div class="filter-left-section">
+                    <h3 class="filter-left-title filter-origin-btn">Origines<img src="/images/arrow-up.svg" alt="arrow" class="arrow-filter-left"></h3>
+                    <div class="filter-left-section filter-checkbox-origin">
                         <% if (locals.coffees?.length) { %>
                             <% for( let o = 0; o < coffees.length; o++ ) { %>
                                 <div class="filter-checkbox-align">   
@@ -56,8 +69,8 @@
 
                 <!--! Partie gauche : filtre -->
                 <div class="filter-left-caracteristic">
-                    <h3 class="filter-left-title">Caractéristique<img src="/images/arrow-up.svg" alt="arrow" class="arrow-filter-left"></h3>
-                    <div class="filter-left-section">
+                    <h3 class="filter-left-title filter-caracteristic-btn">Caractéristique<img src="/images/arrow-up.svg" alt="arrow" class="arrow-filter-left"></h3>
+                    <div class="filter-left-section filter-checkbox-caracteristic">
 
                         <% if (locals.uniqueCarac?.length) { %>
                             <% for( let c = 0; c < uniqueCarac.length; c++ ) { %>
@@ -72,8 +85,8 @@
                 </div>
 
                 <div class="filter-left-disponibility">
-                    <h3 class="filter-left-title">Caractéristique<img src="/images/arrow-up.svg" alt="arrow" class="arrow-filter-left"></h3>
-                    <div class="filter-left-section">
+                    <h3 class="filter-left-title filter-disponibility-btn">Disponible<img src="/images/arrow-up.svg" alt="arrow" class="arrow-filter-left"></h3>
+                    <div class="filter-left-section filter-checkbox-disponibility">
 
                         <% if (locals.uniqueDispo?.length) { %>
                             <% for( let d = 0; d < uniqueDispo.length; d++ ) { %>
@@ -100,6 +113,8 @@
                             <h3 class="card-title"><%= coffees[i].name %></h3>
                             <p class="card-origine"><strong>Origine : </strong><%= coffees[i].origin.name %></p>
                             <p class="card-carac"><strong>Caractéristique : </strong><%= coffees[i].caracteristic.carac %></p>
+                            <p class="card-price"><strong>Prix au kilo : </strong><%= new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(coffees[i].price_kilo) %></p>
+                            <p class="card-disponibility"><strong>Disponible : </strong><%= coffees[i].disponibility.dispo %></p>
                         </div>
                     </a> 
                 </div>

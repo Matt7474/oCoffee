@@ -1,19 +1,19 @@
 import { router } from "../router.js";
 
 const loginController = {
-    async index(req, res) {
 
+    async index(req, res) {
     
         res.render("login")
     },
 
     async signup(req, res) {
         
+        const user = req.body;
+        res.locals.user = user;
+        req.session.user = user;
         
-        console.log("je suis la !");
-        
-    
-        res.redirect("compte")
+        res.redirect("/")
     },
 };
 

@@ -6,7 +6,6 @@
             <a href="/" class="router-top">Accueil</a><img src="/images/arrow-up.svg" alt="arrow" class="router-arrow"><a href="/catalogue" class="router-top">Catalogue</a>
         </div>
         <div class="login-container">
-            <p class="text-on-dev">Page en cours de developpement !</p>
             <div class="sign-container">
             <form method="POST" class="sign-in" action="/signup">
                 <!--! Partie pas de compte -->
@@ -15,22 +14,22 @@
                     <div class="form-container-identity">
                         <div class="identity">Vous êtes : *</div>
                             <div class="genre-Mr-Mme-container">
-                                <input type="radio" value="genre-Mr" name="genre" id="genre-Mr" required>
+                                <input type="radio" value="Mr" name="genre" id="genre-Mr" required>
                                 <label class="genre-Mr-Mme" for="genre-Mr">Mr</label>
                             <br>
-                                <input type="radio" value="genre-Mme" name="genre" id="genre-Mme" required>
+                                <input type="radio" value="Mme" name="genre" id="genre-Mme" required>
                                 <label class="genre-Mr-Mme" for="genre-Mme">Mme</label>
                             <br>
-                                <input type="radio" value="genre-no-genre" name="genre" id="genre-no-genre" required>
+                                <input type="radio" value="non genré" name="genre" id="genre-no-genre" required>
                                 <label class="genre-Mr-Mme" for="genre-no-genre">Non genré</label>
                             </div>
                         <br>
                         <div >
                             <label for="last-name" class="form-ref">Nom : *</label><br>
-                            <input class="champ" type="text" name="last-name" id="last-name" placeholder="Doe" size="35" required><br>
+                            <input class="champ" type="text" name="lastname" id="last-name" placeholder="Doe" size="35" required><br>
                             
                             <label for="first-name" class="form-ref">Prénom : *</label><br>
-                            <input class="champ" type="text" name="first-name" id="first-name" placeholder="John" size="35" required><br>
+                            <input class="champ" type="text" name="firstname" id="first-name" placeholder="John" size="35" required><br>
                             
                             <label for="mail" class="form-ref">Email : *</label><br>
                             <input class="champ" type="email" name="mail" id="mail" placeholder="john.doe@fictif.com" size="35" required><br>
@@ -39,7 +38,7 @@
                             <input class="champ" type="password" name="password" id="password" placeholder="mot de passe" size="35" required><br>
                            
                             <label for="password-confirmation" class="form-ref">Confirmation du mot de passe : *</label><br>
-                            <input class="champ" type="password" name="password-confirmation" id="password-confirmation" placeholder="confirmation du mot de passe" size="35" required><br>
+                            <input class="champ" type="password" name="passwordconfirmation" id="password-confirmation" placeholder="confirmation du mot de passe" size="35" required><br>
                            
                         </div>
                     </div>   

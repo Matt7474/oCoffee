@@ -32,6 +32,10 @@
                     <a href="/" class="header-title-oCoffee">o'Coffee</a>
                 </div>
 
+                <% if (locals.user) { %>
+                    <p class="username">Bienvenue <%= locals.user.firstname %></p>
+                <% } %>
+
                 <div class="searchbar-and-menu-container">
                     <!--! Partie searchbar -->
                     <div>
