@@ -79,7 +79,12 @@ INSERT INTO "coffee"("id","name", "description", "reference", "origin_id", "pric
 (5,'Guatemalan Antigua', 'Café corsé avec des nuances chocolatées et une pointe d''épice.',256505890,5,21.25,3,1),
 (6,'Kenyan AA', 'Café complexe connu pour son acidité rappelant le vin et ses saveurs fruitées.',295432730,6,23.70,1,1),
 (7,'Sumatra Mandheling', 'Café profond et terreux avec un corps lourd et une faible acidité.',302932754,7,19.95,3,1),
-(8,'Costa Rican Tarrazu', 'Café vif et net avec une finition propre et une acidité vive.',327302954,8,24.50,1,1),
+
+
+(8,'Costa Rican Tarrazu', '
+Le café Costa Rican Tarrazú est l''un des cafés les plus renommés au monde, apprécié pour sa qualité exceptionnelle et son goût distinctif. Cultivé dans la région montagneuse de Tarrazú, au cœur du Costa Rica, ce café bénéficie d''un climat idéal et d''un sol volcanique riche qui lui confèrent une complexité de saveurs unique. Ce café est souvent décrit comme ayant une acidité vive, une douceur délicate et des notes de fruits rouges, de caramel et parfois de noix ou de chocolat. Grâce à ses conditions de culture optimales et aux méthodes de récolte et de traitement soignées, le Tarrazú est un café de spécialité prisé par les amateurs et les experts du monde entier. C’est un véritable symbole du savoir-faire costaricien dans le domaine du café. Café vif et net avec une finition propre et une acidité vive.',327302954,8,24.50,1,1),
+
+
 (9,'Vietnamese Robusta', 'Café audacieux et fort avec une saveur robuste distinctive.',549549090,9,16.75,5,1),
 (10,'Tanzanian Peaberry', 'Acidité vive avec un profil de saveur rappelant le vin et un corps moyen.',582954954,10,26.80,6,1),
 (11,'Jamaican Blue Mountain', 'Reconnu pour sa saveur douce, son acidité vive et son absence d''amertume.',589100954,11,39.25,4,1),

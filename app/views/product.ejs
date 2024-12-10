@@ -13,9 +13,7 @@
 
         <div class="product-container">
             <img src="/images/cafe-database/<%= coffee.name %>.jpg" alt="img-Espresso" class="product-img">
-            
             <div class="product-card-container">
-
                 <div class="product-title-date-container">
                     <h3 class="card-title"><%= coffee.name %></h3>
                     <div class="product-date-ref-container">
@@ -24,14 +22,17 @@
                     </div>
                 </div>
                 <p class="card-origine"><strong>Origine : </strong><%= coffee.origin.name %></p>
-                <p class="card-carac"><strong>Caractéristique : </strong><%= coffee.caracteristic.carac %></p>
                 <p class="cart-description"><strong>Description : </strong><%= coffee.description %></p>
+                <p class="card-carac"><strong>Caractéristique : </strong><%= coffee.caracteristic.carac %></p>
                 <p class="card-price"><strong>Prix au kilo : </strong><%= new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(coffee.price_kilo) %></p>
-                <p class="card-dispo"><strong>Disponible : </strong><%= coffee.disponibility.dispo %></p>
-               
-            
+                <div class="card-cart">
+
+                    <p class="card-dispo"><strong>Disponible : </strong><%= coffee.disponibility.dispo %></p>
+
+                    <a href="#" class="router-top">ajouter au panier<img src="/images/logo/panier-main-color.svg" alt="logo-panier" class="card-cart-logo"></a>
+                    
+                </div>    
             </div>
-            
         </div>
     </main>
   
