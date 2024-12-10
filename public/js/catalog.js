@@ -114,3 +114,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //! Fonction pour le tri des cafés
 
+document.addEventListener("DOMContentLoaded", () => {
+  const sortMenu = document.getElementById("sortMenu");
+  const coffeeCards = Array.from(document.querySelectorAll('.catalog-card'));  // Transformer la NodeList en Array
+
+  // Fonction pour trier les cafés en fonction de l'option sélectionnée
+  const sortCoffees = () => {
+    const selectedOption = sortMenu.value;
+
+    // Trier les cartes de café selon le critère sélectionné
+    coffeeCards.sort((a, b) => {
+      const nameA = a.querySelector('.card-title').textContent.trim();
+      const nameB = b.querySelector('.card-title').textContent.trim();
+      const priceA = parseFloat(a.querySelector('.card-price').textContent.trim().replace(/[^\d.-]/g, '')); // Convertir en nombre
+      const priceB = parseFloat(b.querySelector('.card-price').textContent.trim().replace(/[^\d.-]/g, ''));
+      const dateA = a.querySelector('.card-date').textContent.trim(); // Supposons qu'il y a une date, si non, ajoute-la dans ton HTML
+      const dateB = b.querySelector('.card-date').textContent.trim();
+
+      switch (selectedOption) {
+        case "alphabetic-asc":
+          return nameA.localeCompare(nameB);  // Tri alphabétique A-Z
+        case "alphabetic-desc":
+          return nameB.localeCompare(nameA);  // Tri alphabétique Z-A
+        case "price-asc":
+          return priceA - priceB;  // Tri par prix croissant
+        case "price-desc":
+          return priceB - priceA;  // Tri par prix décroissant
+        case "date-asc":
+          return new Date(dateA) - new Date(dateB);  // Tri par date la plus ancienne
+        case "date-desc":
+          return new Date(dateB) - new Date(dateA);  // Tri par date la plus récente
+        default:
+          return 0;  // Aucun tri
+      }
+    });
+
+    // Réorganiser les cartes dans le DOM en fonction du tri
+    const catalogCardsContainer = document.querySelector('.catalog-cards-container');
+    coffeeCards.forEach(card => catalogCardsContainer.appendChild(card));  // Reajouter les cartes triées
+  };
+
+  // Ajouter l'événement de changement pour le menu de tri
+  sortMenu.addEventListener("change", sortCoffees);
+});

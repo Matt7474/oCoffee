@@ -115,6 +115,7 @@
                             <p class="card-carac"><strong>Caractéristique : </strong><%= coffees[i].caracteristic.carac %></p>
                             <p class="card-price"><strong>Prix au kilo : </strong><%= new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(coffees[i].price_kilo) %></p>
                             <p class="card-disponibility"><strong>Disponible : </strong><%= coffees[i].disponibility.dispo %></p>
+                            <p class="card-date"><strong>Ajouté le : </strong><%= coffees[i].created_at %></p>
                         </div>
                     </a> 
                 </div>
