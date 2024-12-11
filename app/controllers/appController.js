@@ -34,7 +34,7 @@ const appController = {
     },
 
     async product(req, res) {
-        console.log(req.params);
+        // console.log(req.params);
         const { name } = req.params;
 
         const coffee = await Coffee.findOne({
