@@ -1,5 +1,6 @@
 <%- include('partials/header') %>
 <link rel="stylesheet" href="/css/product.css">
+<script src="/js/product.js" defer></script>
 
     <main>
         <div class="router-top-container">
@@ -32,7 +33,7 @@
                     <div class="card-qty-container">
                         <quantity-input class="qty-container">
 
-                          <label class="hidden" for="qty-input"></label>
+                          <label class="hidden" for="qty-input qty-submit"></label>
                           <div class="qty-input-container">
 
                             <button type="button" class="qty-input-btn btn-minus" name="minus">
@@ -49,7 +50,7 @@
                         </quantity-input>
                         
                         <div class="card-add_to_cart-container">
-                            <button type="submit" class="card-add_to_cart-btn">Ajouter au panier</button>
+                            <button type="submit" name="qty-submit" class="card-add_to_cart-btn">Ajouter au panier</button>
                         </div>
 
                     </div>

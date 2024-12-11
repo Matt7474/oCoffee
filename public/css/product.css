@@ -5,16 +5,11 @@
     margin-right: 20%;
     margin-top: 8rem;
     margin-bottom: 8rem;
-    /* background-image: url("../images/images-background/tissus-lin2.jpg");
-    border-radius: 25px;
-    padding-top: 3rem;
-    padding-bottom: 3rem; */
 }
 
 .product-card-container{
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     color: var(--main-color);
     width: 800px;
     margin-left: 3rem;
@@ -53,15 +48,12 @@
    margin-right: 1.5rem;
 }
 
-.product-ref{
-   
-}
+.product-ref{}
 
 .card-origine, .card-carac, .cart-description, .card-price, .card-dispo,.card-conditionnemennt{
     margin: .5rem;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
-    
     margin-top: .5rem;
     font-size: 1rem; 
     line-height: 1.8rem;  
@@ -95,6 +87,7 @@
     margin-left: 1.5rem;
     margin-right: 1.5rem;
 }
+
 
 /*! Partie quantité +/- !*/
 
@@ -141,6 +134,7 @@
     border: none;
 }
 
+
 /*! Partie ajout au panier +/- !*/
 
 .card-add_to_cart-container{
@@ -161,4 +155,24 @@
     background-color: var(--third-color);
     color: var(--secondary-color);
     cursor: pointer;
+}
+
+
+/*! Partie pour cacher les fleches de selection de qté +/- !*/
+/* Cacher les flèches sur les navigateurs basés sur Webkit (Chrome, Safari) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Cacher les flèches sur Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Masquer les flèches au survol */
+input[type="number"]:hover::-webkit-outer-spin-button,
+input[type="number"]:hover::-webkit-inner-spin-button {
+    display: none;
 }
