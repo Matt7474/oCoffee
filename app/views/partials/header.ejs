@@ -39,9 +39,10 @@
                 <div class="searchbar-and-menu-container">
                     <!--! Partie searchbar -->
                     <div>
-                        <form action="/">
+                        <form method="GET" action="/produit/">
                             <div class="header-searchbar-container">
-                                <input type="text" class="header-searchbar" placeholder="Vous cherchez un café ?">
+                                <label for="header-searchbar"></label>
+                                <input name="header-searchbar" type="text" id="header-searchbar" class="header-searchbar" placeholder="Vous cherchez un café ?">
                                 <button type="submit" class="header-searchbar-button"><img class="header-searchbar-glass" alt="loupe" src="/images/logo/loupe-main-color.svg"></button>
                             </div>
                         </form>
@@ -69,7 +70,7 @@
                 </div>
 
                 <div>
-                    <form action="/">
+                    <form method="GET" action="/produit/">
                         <div class="header-searchbar-container menu-searchbar-container">
                             <input type="text" class="header-searchbar menu-searchbar" placeholder="Un café vous ferais plaisir ?">
                             <button type="submit" class="header-searchbar-button menu-searchbar-button"><img class="header-searchbar-glass" alt="loupe" src="/images/logo/loupe-main-color.svg"></button>

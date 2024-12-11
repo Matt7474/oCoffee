@@ -1,5 +1,6 @@
 import { router } from "../router.js";
 import { Coffee } from '../models/index.js';
+import { Op } from "sequelize";
 
 
 const appController = {
@@ -33,15 +34,45 @@ const appController = {
     },
 
     async product(req, res) {
-        const {id} = req.params;
-        // console.log(id);
+        console.log(req.params);
+        const { name } = req.params;
 
-        const coffee = await Coffee.findByPk(id,{
+        const coffee = await Coffee.findOne({
+            where: { name },
             include: ['origin', 'caracteristic', 'disponibility']
-        });        
+        });     
         
         res.render("product", { coffee })
     },
+
+    async search(req, res) {
+        const searchQuery = req.query['header-searchbar'];
+        // console.log('La recherche est:', searchQuery);
+    
+        try {
+    
+            const coffees = await Coffee.findOne({
+                where: {
+                    name: {
+                        [Op.iLike]: `%${searchQuery}%`
+                    }
+                },
+                include: ['origin', 'caracteristic', 'disponibility']
+            });
+            // console.log(coffees);
+            const coffeeName = coffees.dataValues.name
+            // console.log(coffeeName);
+            if (!coffees) {
+                return res.status(404).render("404");
+            }
+
+            res.redirect(`/produit/${coffeeName}`);
+    
+        } catch (error) {
+            console.error('Erreur de recherche :', error);
+            res.status(500).render('500');
+        }
+    }
 };
 
 

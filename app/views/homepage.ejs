@@ -44,7 +44,7 @@
                 <% for( let i = 0; i < coffees.length; i++ ) { %>
                 
                     <div class="homepage-card">
-                        <a href="/produit/<%= coffees[i].id %>" class="homepage-card-link">
+                        <a href="/produit/<%= coffees[i].name %>" class="homepage-card-link">
                             <div class="card-container">
                                 <img src="/images/cafe-database/<%= coffees[i].name %>.jpg" alt="img-<%= coffees[i].name %>" class="card-img">
                                 <h3 class="card-title"><%= coffees[i].name %></h3>

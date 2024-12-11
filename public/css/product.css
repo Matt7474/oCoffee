@@ -5,6 +5,10 @@
     margin-right: 20%;
     margin-top: 8rem;
     margin-bottom: 8rem;
+    /* background-image: url("../images/images-background/tissus-lin2.jpg");
+    border-radius: 25px;
+    padding-top: 3rem;
+    padding-bottom: 3rem; */
 }
 
 .product-card-container{
@@ -156,4 +160,5 @@
 .card-add_to_cart-btn:hover{
     background-color: var(--third-color);
     color: var(--secondary-color);
+    cursor: pointer;
 }
