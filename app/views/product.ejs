@@ -25,13 +25,35 @@
                 <p class="cart-description"><strong>Description : </strong><%= coffee.description %></p>
                 <p class="card-carac"><strong>Caractéristique : </strong><%= coffee.caracteristic.carac %></p>
                 <p class="card-price"><strong>Prix au kilo : </strong><%= new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(coffee.price_kilo) %></p>
-                <div class="card-cart">
+                <p class="card-dispo"><strong>Disponible : </strong><%= coffee.disponibility.dispo %>
+                <p class="card-conditionnemennt"><strong>Conditionnement : </strong> Paquet de 1 kg
 
-                    <p class="card-dispo"><strong>Disponible : </strong><%= coffee.disponibility.dispo %></p>
 
-                    <a href="#" class="router-top">ajouter au panier<img src="/images/logo/panier-main-color.svg" alt="logo-panier" class="card-cart-logo"></a>
-                    
-                </div>    
+                    <div class="card-qty-container">
+                        <quantity-input class="qty-container">
+
+                          <label class="hidden" for="qty-input"></label>
+                          <div class="qty-input-container">
+
+                            <button type="button" class="qty-input-btn btn-minus" name="minus">
+                              <span class="visually-hidden">-</span>
+                            </button>
+
+                            <input type="number" class="qty-input" id="qty-input" name="quantity" min="1" value="1">
+                            
+                            <button type="button" class="qty-input-btn btn-plus" name="plus">
+                              <span class="visually-hidden">+</span>
+                            </button>
+
+                          </div>
+                        </quantity-input>
+                        
+                        <div class="card-add_to_cart-container">
+                            <button type="submit" class="card-add_to_cart-btn">Ajouter au panier</button>
+                        </div>
+
+                    </div>
+
             </div>
         </div>
     </main>

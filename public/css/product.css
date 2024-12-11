@@ -53,12 +53,12 @@
    
 }
 
-.card-origine, .card-carac, .cart-description, .card-price, .card-dispo{
+.card-origine, .card-carac, .cart-description, .card-price, .card-dispo,.card-conditionnemennt{
     margin: .5rem;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
-    margin-bottom: .5rem;
-    margin-top: 1rem;
+    
+    margin-top: .5rem;
     font-size: 1rem; 
     line-height: 1.8rem;  
     text-align: justify; 
@@ -76,19 +76,84 @@
     font-size: 1.5rem;
 }
 
-.card-cart{
-    display: flex;
-    justify-content: space-between;
-    margin-right: 1.5rem;
-    font-weight: normal;
+.card-cart-text{
+    text-decoration: none;
+    color: var(--main-color);
 }
 
 
-.card-dispo{
+/*! Partie quantité container !*/
+
+.card-qty-container{
     display: flex;
     flex-direction: row;
+    margin-top: 2rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
 }
 
-.card-cart-logo{
-    width: 35px;
+/*! Partie quantité +/- !*/
+
+.qty-container{
+    width: 100%;
+}
+
+.qty-input-container{
+    width: 7rem;
+    height: 2rem;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--main-color);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+.qty-input-btn{
+    height: 2rem;
+    font-weight: bold;
+    background: none;
+    border: none;
+}
+
+.btn-minus{
+    border-right: 1px solid var(--main-color);
+    padding-right: 1rem;
+    cursor: pointer;
+}
+.btn-plus{
+    border-left: 1px solid var(--main-color);
+    padding-left: 1rem;
+    cursor: pointer;
+}
+
+.qty-input{
+    height: 2rem;
+    width: 100%;
+    font-weight: bold;
+    justify-items: center;
+    background: none;
+    border: none;
+}
+
+/*! Partie ajout au panier +/- !*/
+
+.card-add_to_cart-container{
+    height: 2rem;
+}
+
+.card-add_to_cart-btn{
+    font-weight: bold;
+    width: 15rem;
+    height: 106%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--main-color);
+    border-radius: 15px;
+}
+.card-add_to_cart-btn:hover{
+    background-color: var(--third-color);
+    color: var(--secondary-color);
 }
