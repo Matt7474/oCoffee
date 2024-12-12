@@ -1,8 +1,8 @@
 header{
     width: 100%;
     margin-top: 0rem;
-    background-color: var(--secondary-color);
     background-image: url("../images/images-background/planche.jpg");
+    background-color: var(--secondary-color);
     background-size: 100%;    
     position: fixed;
     z-index: 10;
@@ -112,18 +112,22 @@ header{
 
 /*! Partie logo login et burger-menu !*/
 
-.header-login-menu-container{
+.header-logo-menu-container{
     display: flex;
     align-items: center;
-}
-
-.header-burger-menu-button{
-    border: none;
 }
 
 .cart-container{
     display: flex;
     position: relative;
+}
+
+.header-cart-menu-button{
+    padding-right: 1rem;
+}
+
+#logo-cart{
+    width: 60px; 
 }
 
 .articles-cart{
@@ -138,25 +142,25 @@ header{
     border-radius: 100%;
     color: #f5e0c6;
     font-weight: bold;
-    left: 2.1rem;
-    top: -.4rem;
+    left: 2.3rem;
+}
+.header-cart-menu-button{}
+
+#logo-login{
+    width: 35px;
+    height: 35px;
+    margin-right: 1.5rem;
 }
 
-.cart-menu{
-    position: relative;
-    padding-right: 1rem;
-    width: 3rem;
+.header-burger-menu-container{
+    width: 50px;
 }
 
-.header-login-menu{
-    width: 2.2rem;
-    margin-right: 1rem;
+#logo-burger-menu{
+    width: 50px;
+    height: 50px;
 }
 
-.header-burger-menu{
-    width: 3rem;
-    margin-right: 1rem;
-}
 
 /*! Partie : menu !*/
 

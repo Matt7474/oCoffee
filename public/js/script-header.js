@@ -46,7 +46,7 @@ const darkModeBtnElem = document.querySelector(".darkmode-btn");
 const HeaderElem = document.querySelector("header");
 // Elements du body
 const bodyElem = document.querySelector("body");
-const btnCatalogueElem = document.querySelector(".btn-catalogue");
+const btnCatalogueElem = document.querySelector("#btn-catalogue");
 // Elements du footer
 const footerElem = document.querySelector("footer");
 
@@ -73,6 +73,7 @@ darkModeBtnElem.addEventListener("click", function (event) {
         
         HeaderElem.style.backgroundImage = "url('../images/images-background/planche.jpg')";
         bodyElem.style.backgroundImage = "url('../images/images-background/planche.jpg')";
+        btnCatalogueElem.style.backgroundImage = "url('../images/cafe-client/256505890.png')";
 
         document.documentElement.style.setProperty('--main-color', secondaryColor);
         document.documentElement.style.setProperty('--secondary-color', mainColor);

@@ -117,8 +117,29 @@ footer{
     margin-left: .2rem;
 }
 
-.logo-youtube{
-    align-self: center;
+#logo-facebook{
+    width: 50px;
+    height: 50px;
+}
+
+#logo-pinterest{
+    width: 58px;
+    height: 61px;
+}
+
+#logo-youtube{
+    width: 65px;
+    height: 50px;
+}
+
+#logo-instagram{
+    width: 54px;
+    height: 51px;
+}
+
+#logo-linkedin{
+    width: 50px;
+    height: 50px;
 }
 
 /*! Partie carte interactive !*/
@@ -164,6 +185,8 @@ footer{
 
 .footer-copyright{
     margin-top: 1rem;
+    color: var(--main-color);
+    padding-bottom: .3rem;
 }
 
 .footer-subtitle{
