@@ -78,7 +78,19 @@ const appController = {
             console.error('Erreur de recherche :', error);
             res.status(500).render('500');
         }
+    },
+
+    async cart(req, res) {
+
+        res.render("cart")
+    },
+
+    async enptyTheCart(req, res) {
+
+        req.session.cartQuantity = 0;
+        res.redirect("catalogue")
     }
+
 };
 
 

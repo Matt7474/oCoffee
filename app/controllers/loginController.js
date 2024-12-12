@@ -15,6 +15,17 @@ const loginController = {
         
         res.redirect("/")
     },
+
+    async delete(req, res) {
+       
+        req.session.destroy((err) => {
+            if (err) {
+                return res.status(500).send('Erreur lors de la suppression de la session');
+            }
+    
+            res.redirect('/');
+        });
+    }
 };
 
 export { loginController }

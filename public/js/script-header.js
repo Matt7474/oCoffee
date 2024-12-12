@@ -79,3 +79,22 @@ darkModeBtnElem.addEventListener("click", function (event) {
         document.documentElement.style.setProperty('--secondary-color', mainColor);
     }
 })
+
+
+
+// Fonction pour réinitialiser le panier à 0
+const emptyCartElem = document.querySelector(".empty-cart");
+
+emptyCartElem.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    localStorage.setItem('cartQuantity', '0');
+
+    const cartQuantityElem = document.querySelector('.articles-cart');
+    if (cartQuantityElem) {
+        cartQuantityElem.textContent = '0';
+    }
+
+    // Afficher une notification à l'utilisateur (optionnel)
+    alert("Votre panier a été vidé");
+});
