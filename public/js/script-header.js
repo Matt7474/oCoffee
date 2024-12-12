@@ -38,3 +38,43 @@ document.addEventListener('DOMContentLoaded', function() {
     // Met à jour l'affichage du panier au chargement de la page
     updateCartDisplay();
 });
+
+//! Fonction DarkMode
+// Bouton darkmode
+const darkModeBtnElem = document.querySelector(".darkmode-btn");
+// Elements du header
+const HeaderElem = document.querySelector("header");
+// Elements du body
+const bodyElem = document.querySelector("body");
+const btnCatalogueElem = document.querySelector(".btn-catalogue");
+// Elements du footer
+const footerElem = document.querySelector("footer");
+
+// Fonction
+darkModeBtnElem.addEventListener("click", function (event) {
+
+    const isDarkMode = bodyElem.classList.toggle("dark-mode");
+
+    // Variable pour permettre le switch de nom des couleurs
+    const mainColor = getComputedStyle(document.documentElement).getPropertyValue('--main-color').trim();
+    const secondaryColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary-color').trim();
+
+    
+    if (isDarkMode) {
+        HeaderElem.style.backgroundImage = "none";
+
+        bodyElem.style.backgroundImage = "none";
+        btnCatalogueElem.style.backgroundImage = "none";
+        
+        
+        document.documentElement.style.setProperty('--main-color', secondaryColor); 
+        document.documentElement.style.setProperty('--secondary-color', mainColor);
+    } else {
+        
+        HeaderElem.style.backgroundImage = "url('../images/images-background/planche.jpg')";
+        bodyElem.style.backgroundImage = "url('../images/images-background/planche.jpg')";
+
+        document.documentElement.style.setProperty('--main-color', secondaryColor);
+        document.documentElement.style.setProperty('--secondary-color', mainColor);
+    }
+})

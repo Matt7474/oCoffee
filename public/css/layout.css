@@ -3,11 +3,12 @@
     --secondary-color: #f7dbb9;
     --third-color: #4c5f1a;
     --fourth-color: #a3734f;
+    --fifth-color: #7e7474;
     font-family: sans-serif;  
 }
 
 body{
-    background-color: var(--secondary-color);
+    background-color: var(--fourth-color);
     background-image: url("../images/images-background/planche.jpg");
     background-size: 100%;
     background-attachment: fixed;

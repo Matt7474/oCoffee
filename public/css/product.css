@@ -13,7 +13,7 @@
     color: var(--main-color);
     width: 800px;
     margin-left: 3rem;
-    border-left: solid 2px rgb(126, 116, 116);
+    border-left: solid 2px var(--fifth-color);
     padding-left: 1rem;
 }
 

@@ -1,7 +1,7 @@
 header{
     width: 100%;
     margin-top: 0rem;
-    background-color: var(--fourth-color);
+    background-color: var(--secondary-color);
     background-image: url("../images/images-background/planche.jpg");
     background-size: 100%;    
     position: fixed;
@@ -218,10 +218,18 @@ header{
 }
 
 .menu-searchbar{
-    background-color: aliceblue;
+    background-color: rgb(247, 239, 213);
 }
 
 .menu-searchbar-button{}
+
+
+.menu-options-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
 
 .menu-link {
     font-size: 1.5rem;
@@ -263,8 +271,33 @@ header{
     margin-right: 1.5rem;
 }
 
+.last{
+    border-bottom: 1px solid var(--main-color);
+}
 
+.darkmode-btn, .disconnection{
+    top: 0rem;
+}
 
+.darkmode-btn{
+    color: var(--main-color);
+    background-image: linear-gradient(
+        to left,
+        transparent,
+        transparent 50%,
+        var(--main-color) 50%,
+        var(--main-color)
+    );
+    background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all 0.25s ease-in;
+}
+.marker-menu-link-dark{
+    width: .5rem;
+    background-color: var(--main-color);
+    left: 0px;
+    margin-right: 1.4rem;
+}
 
 
 /*! hidden-menu doit rester à la fin du script !*/
