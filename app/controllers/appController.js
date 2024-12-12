@@ -1,10 +1,16 @@
 import { router } from "../router.js";
 import { Coffee } from '../models/index.js';
 import { Op } from "sequelize";
+import fetch from 'node-fetch'
 
 
 const appController = {
     async homepage(req, res) {
+
+        //! Test de connexion avec une API d'images de café (fonctionnel) 
+        // const response = await fetch('https://coffee.alexflipnote.dev/random.json');
+        // const data = await response.json();
+        // const imageUrl = data.file;
 
         const coffees = await Coffee.findAll({
             limit: 3,
