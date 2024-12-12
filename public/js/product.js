@@ -1,31 +1,3 @@
-// //! Fonction qui sert a faire évoluer la quantité avec les + / - !//
-
-// document.addEventListener('DOMContentLoaded', function() {
-// const qtyInputElem = document.getElementById('qty-input');
-// const btnPlusElem = document.querySelector('.btn-plus');
-// const btnMinusElem = document.querySelector('.btn-minus');
-
-
-// btnPlusElem.addEventListener('click', function() {
-//     let currentValue = parseInt(qtyInputElem.value);
-//     let minValue = parseInt(qtyInputElem.getAttribute('min'));
-
-//     if (!isNaN(currentValue)) {
-//     qtyInputElem.value = currentValue + 1;
-//     }
-// });
-
-// btnMinusElem.addEventListener('click', function() {
-//     let currentValue = parseInt(qtyInputElem.value); 
-//     let minValue = parseInt(qtyInputElem.getAttribute('min'));
-
-//     if (!isNaN(currentValue) && currentValue > minValue) {
-//     qtyInputElem.value = currentValue - 1;
-//     }
-// });
-// });
-  
-
 //! Fonction qui sert a faire évoluer la quantité dans le panier !//
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -52,11 +24,16 @@ document.addEventListener('DOMContentLoaded', function() {
         let currentQuantity = getCartQuantity();
         currentQuantity += quantityToAdd;
         localStorage.setItem('cartQuantity', currentQuantity); // Enregistre la nouvelle quantité
+        console.log(localStorage.getItem('cartQuantity'));
         updateCartDisplay(); // Met à jour l'affichage dans l'en-tête
+
     }
 
     // Initialisation de l'affichage du panier
     updateCartDisplay();
+
+
+    // //! Fonction qui sert a faire évoluer la quantité avec les + / - !//
 
     // Fonction pour gérer l'ajout d'articles au panier
     addToCartBtn.addEventListener('click', function() {
@@ -80,4 +57,9 @@ document.addEventListener('DOMContentLoaded', function() {
             qtyInputElem.value = currentValue - 1;
         }
     });
+   
 });
+
+
+//! Fonction pour remettre le panier à 0 ! 
+// localStorage.setItem('cartQuantity', '0');
