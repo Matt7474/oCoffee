@@ -19,7 +19,7 @@
 
 .product-img{
     width: 50%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 4/3;
     align-self: flex-start;
     border-radius: 25px;
 }

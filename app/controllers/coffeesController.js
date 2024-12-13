@@ -23,12 +23,11 @@ const coffeesController = {
 
     async store(req, res) {
         
-        console.log(req.body);
-        
-        const { name, description, reference, price_kilo, origin_id, caracteristic_id, disponibility_id } = req.body;
+        const { id, name, description, reference, price_kilo, origin_id, caracteristic_id, disponibility_id } = req.body;
 
         const newCoffee = await Coffee.create(
             {
+                id: id,
                 name: name,
                 description: description,
                 reference: reference,

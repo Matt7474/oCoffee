@@ -25,7 +25,7 @@ const appController = {
     async catalog(req, res) {
 
         const coffees = await Coffee.findAll({
-            order: [['id', 'ASC']],
+            order: [['name', 'ASC']],
             include: ['origin', 'caracteristic', 'disponibility']
         })
 
