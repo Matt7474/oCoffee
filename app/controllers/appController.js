@@ -8,17 +8,18 @@ const appController = {
     async homepage(req, res) {
 
         //! Test de connexion avec une API d'images de café (fonctionnel) 
-        const response = await fetch('https://coffee.alexflipnote.dev/random.json');
-        const data = await response.json();
-        const imageUrl = data.file;
+        // const response = await fetch('https://coffee.alexflipnote.dev/random.json');
+        // const data = await response.json();
+        // const imageUrl = data.file;
 
         const coffees = await Coffee.findAll({
             limit: 3,
             order: [['id', 'DESC']],
             include: ['origin', 'caracteristic']
         })
-    
-        res.render("homepage", { coffees, imageUrl })
+        console.log(coffees);
+        
+        res.render("homepage", { coffees })
     },
 
     async catalog(req, res) {

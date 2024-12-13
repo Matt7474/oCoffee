@@ -89,13 +89,16 @@
 
 /* ! Partie vignettes */
 
-.arrow-container{
+.arrow-btn{
     align-content: center;
 }
 @media all and (max-width: 1200px) {
-    .arrow-container{
+    .arrow-btn{
         display: none;
     }
+}
+.arrow-btn:hover{
+    cursor: pointer;
 }
 
 .arrow-left{
@@ -130,6 +133,7 @@
 }
 
 .homepage-cards-container{
+    column-gap: 3rem;
     margin-bottom: 3rem;
     display: flex;
     flex-direction: row;

@@ -15,6 +15,8 @@ app.set('views', join(import.meta.dirname, './app/views'));
 app.use(express.static(join(import.meta.dirname, './public')));
 app.use(express.urlencoded({extended : true}))
 
+app.use(express.json());
+
 
 app.use(session({
     secret: 'ocoffee',

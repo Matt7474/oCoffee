@@ -1,5 +1,6 @@
 <%- include('partials/header') %>
 <link rel="stylesheet" href="/css/homepage.css">
+<script src="/js/homepage.js" defer></script>
 
     <main>
         <div class="main-container">
@@ -38,10 +39,10 @@
             </div>
             <p class="homepage-cards-title">Nos dernières nouveautés</p>
             <div class="homepage-cards-container">
-                <a href="/produit/" class="arrow-container"><img src="/images/arrow-up.svg" alt="fleche" class="arrow-left"></a>
+                <btn class="arrow-btn"><img src="/images/arrow-up.svg" alt="fleche" class="arrow-left"></btn>
                 <!-- card -->
                 <% if (locals.coffees?.length) { %>
-                <% for( let i = 0; i < coffees.length; i++ ) { %>
+                <% for( let i = 0; i < 3; i++ ) { %>
                 
                     <div class="homepage-card">
                         <a href="/produit/<%= coffees[i].name %>" class="homepage-card-link">
@@ -56,7 +57,7 @@
                 <% } %>
                 <% } %> 
         
-                <a href="/" class="arrow-container"><img src="/images/arrow-up.svg" alt="fleche" class="arrow-right"></a>
+                <btn class="arrow-btn"><img src="/images/arrow-up.svg" alt="fleche" class="arrow-right"></btn>
             </div>
         </div>   
 

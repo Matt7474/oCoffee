@@ -1,3 +1,15 @@
+/* header{
+    background-color: var(--main-color);
+}
+
+body{
+    background-color: var(--fourth-color);
+}
+
+footer{
+    background-color: var(--main-color);
+} */
+
 /*! Partie haute : img + text */
 
 .text-img-container{
