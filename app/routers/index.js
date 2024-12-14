@@ -8,6 +8,8 @@ import { caracteristicsRouter } from './caracteristicsRouter.js';
 
 import { appController } from '../controllers/appController.js';
 
+import { supportController } from '../controllers/supportController.js';
+
 import { loginController } from '../controllers/loginController.js';
 
 
@@ -25,6 +27,13 @@ router.get('/produit/:name([a-zA-Z0-9-%]+)', catchErrors(appController.product))
 router.get('/produit/', catchErrors(appController.search)); 
 router.get('/panier', catchErrors(appController.cart));
 router.get('/vidange', catchErrors(appController.enptyTheCart));
+
+
+router.get('/support', supportController.index)
+router.get('/mentions-legales', supportController.mentions)
+router.get('/cgv', supportController.cgv)
+router.get('/sitemap', supportController.sitemap)
+
 
 
 router.get('/compte', loginController.index);

@@ -1,0 +1,42 @@
+.support-container{
+    padding-top: 22rem;
+    padding-bottom: 22rem;
+    display: flex;
+    justify-content: center;
+}
+
+.support-ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.support-li{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.router-top-container{
+    margin-top: -8rem;
+    margin-bottom: 3rem;
+}
+
+
+.mentions-container{
+    padding-top: 10rem;
+}
+
+.mentions-text{
+    background-image: url('/images/images-background/tissus-lin2.jpg');
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    line-height: 1.5rem;
+    margin-bottom: 3rem;
+    padding: 1rem;
+}
+
+.sitemap{
+    background-image: none;
+}

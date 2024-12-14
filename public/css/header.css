@@ -181,7 +181,7 @@ header{
     top: 5rem;
     right: 0rem;
     width: 17rem;
-    height: 40rem;
+    height: 43rem;
 }
 
 .menu-title-container{
@@ -311,6 +311,9 @@ header{
     margin-right: 1.4rem;
 }
 
+.minitext{
+    font-size: .6rem;
+}
 
 /*! hidden-menu doit rester à la fin du script !*/
 .hidden-menu{
