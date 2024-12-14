@@ -1,6 +1,7 @@
 import { Router } from 'express';
 const router = Router();
 
+import { catchErrors } from '../middlewares/catchError.js';
 import { coffeesRouter } from './coffeesRouter.js';
 import { originsRouter } from './originsRouter.js';
 import { caracteristicsRouter } from './caracteristicsRouter.js';
@@ -18,12 +19,12 @@ router.use(originsRouter);
 router.use(caracteristicsRouter);
 
 
-router.get('/', appController.homepage);
-router.get('/catalogue', appController.catalog);
-router.get('/produit/:name([a-zA-Z0-9-%]+)', appController.product);
-router.get('/produit/', appController.search); 
-router.get('/panier', appController.cart);
-router.get('/vidange', appController.enptyTheCart);
+router.get('/', catchErrors(appController.homepage));
+router.get('/catalogue', catchErrors(appController.catalog));
+router.get('/produit/:name([a-zA-Z0-9-%]+)', catchErrors(appController.product));
+router.get('/produit/', catchErrors(appController.search)); 
+router.get('/panier', catchErrors(appController.cart));
+router.get('/vidange', catchErrors(appController.enptyTheCart));
 
 
 router.get('/compte', loginController.index);

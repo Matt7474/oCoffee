@@ -1,6 +1,7 @@
 import { Router } from 'express';
 const originsRouter = Router();
 
+import { catchErrors } from '../middlewares/catchError.js';
 import { originsController } from '../controllers/originsController.js';
 
 originsRouter.get('/origins/', originsController.index)
