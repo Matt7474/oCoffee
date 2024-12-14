@@ -1,10 +1,11 @@
-import { router } from "../router.js";
+import { router } from "../routers/index.js";
 import { Coffee } from '../models/index.js';
 import { Op } from "sequelize";
 import fetch from 'node-fetch'
 
 
 const appController = {
+
     async homepage(req, res) {
 
         //! Test de connexion avec une API d'images de café (fonctionnel) 
@@ -21,6 +22,7 @@ const appController = {
         
         res.render("homepage", { coffees })
     },
+
 
     async catalog(req, res) {
 
@@ -40,8 +42,9 @@ const appController = {
         res.render("catalog", { coffees, uniqueCarac, uniqueDispo })
     },
 
+
     async product(req, res) {
-        // console.log(req.params);
+
         const { name } = req.params;
 
         const coffee = await Coffee.findOne({
@@ -52,9 +55,10 @@ const appController = {
         res.render("product", { coffee })
     },
 
+
     async search(req, res) {
+
         const searchQuery = req.query['header-searchbar'];
-        // console.log('La recherche est:', searchQuery);
     
         try {
     
@@ -81,18 +85,18 @@ const appController = {
         }
     },
 
+
     async cart(req, res) {
 
         res.render("cart")
     },
+
 
     async enptyTheCart(req, res) {
 
         req.session.cartQuantity = 0;
         res.redirect("catalogue")
     }
-
 };
-
 
 export { appController }

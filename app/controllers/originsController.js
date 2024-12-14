@@ -1,6 +1,6 @@
-import { or } from 'sequelize';
 import { Origin } from '../models/index.js';
-
+import sanitize from 'sanitize-html';
+import Joi from 'joi';
 
 const originsController = {
 
@@ -53,6 +53,7 @@ const originsController = {
     },
 
     async destroy(req, res, next) {
+
         const { id } = req.params;
         const origin = await Origin.findByPk(id);
 

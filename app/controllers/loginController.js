@@ -1,4 +1,4 @@
-import { router } from "../router.js";
+import { router } from "../routers/index.js";
 
 const loginController = {
 
@@ -6,6 +6,7 @@ const loginController = {
     
         res.render("login")
     },
+
 
     async signup(req, res) {
         
@@ -16,6 +17,7 @@ const loginController = {
         res.redirect("/")
     },
 
+    
     async delete(req, res) {
        
         req.session.destroy((err) => {

@@ -3,7 +3,7 @@ import express from 'express';
 import session from 'express-session'
 
 
-import { router } from './app/router.js';
+import { router } from './app/routers/index.js';
 import { join } from 'node:path';
 
 const app = express();
