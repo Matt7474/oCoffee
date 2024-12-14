@@ -45,6 +45,12 @@ header{
 
 /*! Partie nom d'utilisateur*/
 
+@media all and (max-width: 950px) {
+    .username{
+        display: none;
+    }
+}
+
 .username{
     position: absolute;
     left: 50%;
@@ -65,11 +71,7 @@ header{
 
 /*! Partie searchbar & responsive !*/
 
-@media all and (max-width: 767px) {
-    .header-searchbar-container{
-        display: none;
-    }
-}
+
 
 @media all and (min-width: 767px) {
     .header-searchbar-container{
@@ -109,6 +111,11 @@ header{
     }
 }
 
+@media all and (max-width: 1920px) {
+    .hsb{
+        display: none;
+    }
+}
 
 /*! Partie logo login et burger-menu !*/
 

@@ -22,6 +22,17 @@ main{
     flex-direction: row;
     align-items: center;
 }
+@media all and (max-width: 920px) {
+    .cart-container-body{
+        flex-direction: column;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .cart-img-coffee{
+        width: 70%;
+    }
+}
+
 
 .cart-img-coffee{
 

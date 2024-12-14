@@ -25,12 +25,19 @@ legend, .identity, .address{
     font-weight: bold;
 }
 
+
 .sign-container{
     display: flex;
     flex-direction: row;
     align-items: center;
     column-gap: 3rem;
 }
+@media all and (max-width: 920px) {
+    .sign-container{
+        flex-direction: column;
+    }
+}
+
 
 /*! Partie Identité !*/
 .form-container-identity{

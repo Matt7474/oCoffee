@@ -19,12 +19,34 @@ footer{
     margin-right: 20%;
     align-items: center;
 }
+@media all and (max-width: 1920px) {
+    .text-img-container{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+@media all and (max-width: 1460px) {
+    .text-img-container{
+        margin-left: 2%;
+        margin-right: 4%;
+    }
+}
+@media all and (max-width: 800px) {
+    .text-img-container{
+        margin-left: -2%;
+        margin-right: 6%;
+    }
+}
 
 .catalog-img{
     width: 40%;
-    
     border-radius: 50px;
     margin-top: 4rem;
+}
+@media all and (max-width: 1920px) {
+    .catalog-img{
+        display: none;
+    }
 }
 
 .catalog-text-title-container{
@@ -156,6 +178,20 @@ footer{
     position: sticky;
     top: 7rem;
 }
+@media all and (max-width: 1200px) {
+    .filter-left-container{
+        border-right: none;
+    }
+}
+@media all and (max-width: 920px) {
+    .filter-left-container{
+        margin-left: -5rem;
+        margin-right: 6rem;
+    }
+}
+
+
+
 
 .filter-left-origine{
     /* position: sticky;
@@ -204,6 +240,16 @@ footer{
     justify-items: center;
     margin-bottom: 1rem;
 }
+@media all and (max-width: 2220px) {
+    .catalog-cards-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+
 
 .catalog-card-link{
     text-decoration: none;

@@ -6,6 +6,13 @@
     margin-top: 8rem;
     margin-bottom: 8rem;
 }
+@media all and (max-width: 1200px) {
+    .product-container{
+        flex-direction: column;
+        align-items: center; 
+    }
+}
+
 
 .product-card-container{
     display: flex;
@@ -16,6 +23,15 @@
     border-left: solid 2px var(--fifth-color);
     padding-left: 1rem;
 }
+@media all and (max-width: 1200px) {
+    .product-card-container{
+        width: 165%;
+        margin-left: 0rem;
+        border-left: none;
+        padding-left: 0rem;
+    }
+}
+
 
 .product-img{
     width: 50%;
@@ -23,6 +39,15 @@
     align-self: flex-start;
     border-radius: 25px;
 }
+@media all and (max-width: 1200px) {
+    .product-img{
+        width: 100%;
+        aspect-ratio: 4/3;
+        align-self: flex-start;
+        border-radius: 25px;
+    }
+}
+
 
 .product-title-date-container{
     display: flex;
