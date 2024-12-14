@@ -18,7 +18,6 @@ const appController = {
             order: [['id', 'DESC']],
             include: ['origin', 'caracteristic']
         })
-        console.log(coffees);
         
         res.render("homepage", { coffees })
     },
