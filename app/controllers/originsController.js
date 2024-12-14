@@ -24,11 +24,24 @@ const originsController = {
 
     async store(req, res) {
         
-        const { id, name } = req.body;
+        const name = req.body.name;
+
+        const schema = Joi.object({
+            name: Joi.string().min(3).required().messages({
+                'string.empty': 'Le champ name ne doit pas être vide',
+                'string.min':
+                    'Le champ name doit contenir au moins {#limit} nametères',
+                'any.required': 'Le champ name est obligatoire',
+            }),
+        })
+
+        const { error } = schema.validate({ name });
+        if (error) {
+            return next(error);
+        }
 
         const newOrigin = await Origin.create(
             {
-                id: id,
                 name: name,
             })
            
@@ -40,7 +53,18 @@ const originsController = {
     async update(req, res) {
 
         const { id } = req.params;
-        const { name } = req.body;
+        const name = req.body.name;
+
+        const schema = Joi.object({
+            name: Joi.string().min(3).required().messages(),
+        });
+
+        const { error } = schema.validate({ name });
+
+        if (error) {
+            return next(error);
+        };
+        
 
         const originToUpdate = await Origin.findByPk(id);
 
