@@ -24,7 +24,7 @@ const originsController = {
 
     async store(req, res) {
         
-        const name = req.body.name;
+        const name = sanitize(req.body.name);
 
         const schema = Joi.object({
             name: Joi.string().min(3).required().messages({
@@ -53,7 +53,7 @@ const originsController = {
     async update(req, res) {
 
         const { id } = req.params;
-        const name = req.body.name;
+        const name = sanitize(req.body.name);
 
         const schema = Joi.object({
             name: Joi.string().min(3).required().messages(),

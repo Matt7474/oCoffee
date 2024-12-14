@@ -24,7 +24,7 @@ const caracteristicsController = {
 
     async store(req, res) {
         
-        const carac = req.body.carac;
+        const carac = sanitize(req.body.carac);
 
         const schema = Joi.object({
             carac: Joi.string().min(3).required().messages({
@@ -54,7 +54,7 @@ const caracteristicsController = {
 
         const { id } = req.params;
 
-        const carac = req.body.carac;
+        const carac = sanitize(req.body.carac);
 
         const schema = Joi.object({
             carac: Joi.string().min(3),

@@ -26,15 +26,15 @@ const coffeesController = {
     async store(req, res, next) {
         
         //! Avec insomnia l'id des 16 premiers n'est pas connu
-        // const id = req.body.id;
+        // const id = req.params
         
         const name = req.body.name;
-        const description = req.body.description;
-        const reference = req.body.reference;
-        const price_kilo = req.body.price_kilo;
-        const origin_id = req.body.origin_id;
-        const caracteristic_id = req.body.caracteristic_id;
-        const disponibility_id = req.body.disponibility_id;
+        const description = sanitize(req.body.description);
+        const reference = sanitize(req.body.reference);
+        const price_kilo = sanitize(req.body.price_kilo);
+        const origin_id = sanitize(req.body.origin_id);
+        const caracteristic_id = sanitize(req.body.caracteristic_id);
+        const disponibility_id = sanitize(req.body.disponibility_id);
 
         const schema = Joi.object({
 
@@ -107,29 +107,30 @@ const coffeesController = {
 
     async update(req, res, next) {
 
-        const id = req.body.id;
+        const { id }= req.params;
         
-        const name = req.body.name;
-        const description = req.body.description;
-        const reference = req.body.reference;
-        const price_kilo = req.body.price_kilo;
-        const origin_id = req.body.origin_id;
-        const caracteristic_id = req.body.caracteristic_id;
-        const disponibility_id = req.body.disponibility_id;
+        console.log(id);
+        
+        const name = sanitize(req.body.name);
+        const description = sanitize(req.body.description);
+        const reference = sanitize(req.body.reference);
+        const price_kilo = sanitize(req.body.price_kilo);
+        const origin_id = sanitize(req.body.origin_id);
+        const caracteristic_id = sanitize(req.body.caracteristic_id);
+        const disponibility_id = sanitize(req.body.disponibility_id);
 
         const schema = Joi.object({
-            id: Joi.number().min(1),
-            name: Joi.string().min(3),
-            description: Joi.string().min(10),
-            reference: Joi.number().min(7),
-            price_kilo: Joi.number().min(1),
-            origin_id: Joi.number().min(1),
-            caracteristic_id: Joi.number().min(1),
-            disponibility_id: Joi.number().min(1),
+            // id: Joi.number().min(1),
+            name: Joi.string().min(3).allow(''),
+            description: Joi.string().min(10).allow(''),
+            reference: Joi.number().min(7).allow(''),
+            price_kilo: Joi.number().min(1).allow(''),
+            origin_id: Joi.number().min(1).allow(''),
+            caracteristic_id: Joi.number().min(1).allow(''),
+            disponibility_id: Joi.number().min(1).allow(''),
         });
 
-        const { error } = schema.validate({ id, name, description, reference, price_kilo, origin_id, caracteristic_id, disponibility_id });
-
+        const { error } = schema.validate({ name, description, reference, price_kilo, origin_id, caracteristic_id, disponibility_id });
         if (error) {
             return next(error);
         };
@@ -139,11 +140,10 @@ const coffeesController = {
         
         if (!coffeeToUpdate) {
             return next()
-        }
+        };
         
         const updatedCoffee = await coffeeToUpdate.update(
             {
-                id: id || coffeeToUpdate.id,
                 name: name || coffeeToUpdate.name,
                 description: description || coffeeToUpdate.description,
                 reference: reference || coffeeToUpdate.reference,
