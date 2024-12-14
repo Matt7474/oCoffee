@@ -2,12 +2,23 @@ import 'dotenv/config';
 import express from 'express';
 import session from 'express-session'
 
+import dotenv from 'dotenv';
+import { sequelizeClient } from './app/database/sequelize.js';
+dotenv.config();
 
 import { router } from './app/routers/index.js';
 import { join } from 'node:path';
 
 const app = express();
 
+(async () => {
+    try {
+        await sequelizeClient.authenticate();
+        console.log('Connexion à la base de données réussie!');
+    } catch (error) {
+        console.error('Erreur de connexion à la base de données :', error);
+    }
+})();
 
 app.set('view engine', 'ejs');
 app.set('views', join(import.meta.dirname, './app/views'));
