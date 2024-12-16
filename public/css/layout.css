@@ -33,6 +33,10 @@ strong{
     color: var(--main-color);
 }
 
+.dark-mode{
+    background-image: none;
+}
+
 /*! Partie haute : route */
 
 .router-top-container{
