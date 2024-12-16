@@ -1,8 +1,37 @@
+
+.router-top-container-support{
+    margin-left: 20%;
+    padding-top: 2rem;
+}
+
 .support-container{
     padding-top: 22rem;
     padding-bottom: 22rem;
     display: flex;
     justify-content: center;
+    background-image: url("/images/adult-harvesting-coffee.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    opacity: 95%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+@media all and (max-width: 2150px) {
+    .support-container{
+        background-size: 80%;
+    }
+}
+@media all and (max-width: 1250px) {
+    .support-container{
+        margin-top: -5rem;
+        margin-bottom: -3rem;
+    }
+}
+@media all and (max-width: 950px) {
+    .support-container{
+        background-image: none;
+    }
 }
 
 .support-ul{
@@ -11,11 +40,28 @@
 }
 
 .support-li{
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 1.7rem;
+    line-height: 4rem;
     text-decoration: none;
-    color: var(--main-color);
+    color: var(--secondary-color);
+    margin-left: 48rem;
+    width: 100%;
 }
+@media all and (max-width: 1250px) {
+    .support-li{
+        margin-left: 25rem;
+    }
+}
+@media all and (max-width: 950px) {
+    .support-li{
+        margin-left: 0rem;
+        color: var(--main-color);
+        margin-top: -3rem;
+        margin-bottom: -4rem;
+    }
+}
+
+
 
 .router-top-container{
     margin-top: -8rem;
