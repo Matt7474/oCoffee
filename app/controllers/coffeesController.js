@@ -38,6 +38,7 @@ const coffeesController = {
 
         const schema = Joi.object({
 
+            // .pattern(/^([^ ]+)$/)
             name: Joi.string().min(3).required().messages({
                 'string.empty': 'Le champ name ne doit pas être vide',
                 'string.min':
