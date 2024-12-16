@@ -313,6 +313,7 @@ header{
 
 .minitext{
     font-size: .6rem;
+    margin-left: 1rem;
 }
 
 /*! hidden-menu doit rester à la fin du script !*/
