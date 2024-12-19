@@ -2,6 +2,8 @@ import 'dotenv/config';
 import express from 'express';
 import session from 'express-session'
 
+import cors from 'cors';
+
 import dotenv from 'dotenv';
 import { sequelizeClient } from './app/database/sequelize.js';
 dotenv.config();
@@ -10,6 +12,15 @@ import { router } from './app/routers/index.js';
 import { join } from 'node:path';
 
 const app = express();
+
+//! cors
+// ...
+// ...
+app.use(
+    cors({
+        origin: '*', // accepte toutes les requêtes
+    })
+);
 
 (async () => {
     try {

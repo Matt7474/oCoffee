@@ -171,6 +171,7 @@ footer{
 }
 
 .filter-left-container{
+    padding-left: 1rem;
     width: 25%;
     height: 100%;
     border-right: 2px solid var(--fifth-color);

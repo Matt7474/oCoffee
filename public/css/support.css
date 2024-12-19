@@ -10,12 +10,13 @@
     display: flex;
     justify-content: center;
     background-image: url("/images/adult-harvesting-coffee.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 50%;
+    background-size: 100%;
     opacity: 95%;
     margin-top: 5rem;
-    margin-bottom: 5rem;
+    /* margin-bottom: 5rem; */
 }
 @media all and (max-width: 2150px) {
     .support-container{
