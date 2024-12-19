@@ -13,16 +13,16 @@ import { join } from 'node:path';
 
 const app = express();
 
-//!
-app.use((req, res, next) => {
-    const allowedIPs = ['http://88.178.106.19'];
-    const requestIP = req.ip; // Peut nécessiter un middleware comme `request-ip` pour une meilleure détection
-    if (allowedIPs.includes(requestIP)) {
-        next();
-    } else {
-        res.status(403).json({ message: 'Accès refusé' });
-    }
-});
+// //!
+// app.use((req, res, next) => {
+//     const allowedIPs = ['http://88.178.106.19'];
+//     const requestIP = req.ip; // Peut nécessiter un middleware comme `request-ip` pour une meilleure détection
+//     if (allowedIPs.includes(requestIP)) {
+//         next();
+//     } else {
+//         res.status(403).json({ message: 'Accès refusé' });
+//     }
+// });
 
 
 //! cors
