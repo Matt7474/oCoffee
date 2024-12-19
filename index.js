@@ -16,11 +16,11 @@ const app = express();
 //! cors
 // ...
 // ...
-app.use(
-    cors({
-        origin: 'http://88.178.106.19'
-    })
-);
+// app.use(
+//     cors({
+//         origin: 'http://88.178.106.19'
+//     })
+// );
 
 (async () => {
     try {
