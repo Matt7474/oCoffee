@@ -7,4 +7,4 @@
 ## Remarques pédagogiques et rendus
 
 [Recommandations](./docs/recommandations/)
-# oCoffee
+# oCoffee.

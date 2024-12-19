@@ -25,7 +25,7 @@ const originsController = {
     async store(req, res) {
         
         const name = sanitize(req.body.name);
-        console.log(name)
+
         const schema = Joi.object({
             name: Joi.string().min(3).required().messages({
                 'string.empty': 'Le champ name ne doit pas être vide',
