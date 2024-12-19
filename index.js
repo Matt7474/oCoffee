@@ -18,7 +18,7 @@ const app = express();
 // ...
 app.use(
     cors({
-        origin: '*', // accepte toutes les requêtes
+        origin: 'http://88.178.106.19'
     })
 );
 
